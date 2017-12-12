@@ -57,16 +57,13 @@ void ManagementUI::regesterPizza() {
 
     while (inpute == 'y'|| inpute == 'Y')
     {   clear_screen();
-        //PizzaMenu pizza;
 
         cout << "Name of the pizza? ";
         cin >> name;
-        //pizza.setname(str);
         cout << "How many toppings are on " << name << " ? ";
         cin >> t;
         PizzaMenu pizza(name,t);
 
-       // pizza.settoppingCnt(t);
         cout << "What toppings are on " << name << " ? ";
         for (int i = 0; i < t; i++)
         {

@@ -6,7 +6,7 @@ PizzaMenuService::PizzaMenuService(){
 }
 
 void PizzaMenuService::save(PizzaMenu& menu){
-    repo.save(menu);
+    repo.write(menu);
 
 }
 
