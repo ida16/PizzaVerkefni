@@ -1,5 +1,7 @@
 #include "../../include/UI/ManagementUI.h"
 
+using namespace std;
+
 ManagementUI::ManagementUI()
 {
     //ctor

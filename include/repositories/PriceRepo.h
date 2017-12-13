@@ -3,6 +3,13 @@
 
 #include "Price.h"
 
+#include <iostream>
+#include <fstream>
+#include <string>
+#include <stdlib.h>
+
+using namespace std;
+
 class PriceRepo
 {
     public:

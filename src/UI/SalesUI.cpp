@@ -1,5 +1,7 @@
 #include "../../include/UI/SalesUI.h"
 
+using namespace std;
+
 SalesUI::SalesUI()
 {
     //ctor

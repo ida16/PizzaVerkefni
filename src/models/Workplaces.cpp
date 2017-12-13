@@ -5,7 +5,7 @@ workplaces::workplaces(){
     name = "";
 }
 
-void workplaces::set_name() {
+void workplaces::set_name(string name) {
     this->name = name;
 }
 

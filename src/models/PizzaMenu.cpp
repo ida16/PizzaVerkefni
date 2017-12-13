@@ -47,16 +47,12 @@ return name;
 }
 
 int PizzaMenu::get_topping_cnt(){
-
-    this -> toppingCnt = toppingCnt;
-    return toppingCnt;
+    return this->toppingCnt;
 }
 
 
 int PizzaMenu::getprice(){
-
-    this -> price = price;
-    return price;
+    return this-> price;
 }
 
 

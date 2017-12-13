@@ -37,4 +37,3 @@ void WorkplacesRepo::read(vector<workplaces> wplace_vector)
         cout << "can not write in file, file is closed" << endl;
     }
 }
-

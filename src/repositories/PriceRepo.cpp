@@ -19,13 +19,15 @@ void PriceRepo::read(Price& price)
 {
     string str;
     int input = 0;
+    int counter = 0;
     ifstream fin;
     fin.open("PriceList.txt");
     if(fin.is_open()) {
         while(!fin.eof()) {
-            getline(fin, str);
+            getline(fin, str, ',');
             input = atoi(str.c_str());
-            input >> price;
+            price.read_in(input, counter);
+            counter++;
         }
     }
     else {

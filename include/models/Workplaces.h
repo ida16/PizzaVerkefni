@@ -10,7 +10,7 @@ class workplaces
 {
     public:
         workplaces();
-        void set_name();
+        void set_name(string name);
         string get_name();
         friend ostream& operator <<(ostream& out, workplaces& workplace);
         friend istream& operator >>(istream& in, workplaces& workplace);

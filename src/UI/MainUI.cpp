@@ -55,10 +55,3 @@ void MainUI::clear_screen(){
         cout << endl;
     }
 }
-
-
-
-
-
-
-

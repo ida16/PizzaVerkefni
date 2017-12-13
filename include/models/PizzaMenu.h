@@ -6,7 +6,6 @@
 #include <fstream>
 #include "toppings.h"
 #include <vector>
-#include "Other.h"
 
 using namespace std;
 
@@ -21,7 +20,7 @@ class PizzaMenu
         friend istream& operator >>(istream& in, PizzaMenu& pizza);
         string getname();
         int get_topping_cnt();
-        int get_topping_price();
+        int getprice();
         string setname(string str);
         int settoppingCnt(int t);
         int setprice(int p);

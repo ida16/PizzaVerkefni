@@ -1,5 +1,7 @@
 #include "PizzaMenuRepo.h"
 
+using namespace std;
+
 PizzaMenuRepo::PizzaMenuRepo(){
     //ctor
 }
@@ -38,5 +40,3 @@ void PizzaMenuRepo::read(){
         cout << "can not write in file, file is closed" << endl;
     }
 }
-
-

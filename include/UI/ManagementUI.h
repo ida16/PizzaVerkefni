@@ -12,10 +12,9 @@
 #include "../service/OtherService.h"
 #include "../service/ToppingService.h"
 #include "WorkplaceService.h"
+#include "PriceService.h"
 //#include "InvalidInputException.h"
 
-
-using namespace std;
 
 
 class ManagementUI
