@@ -12,6 +12,8 @@
 #include "../service/ToppingService.h"
 #include "WorkplaceService.h"
 #include "LowerCasevalidation.h"
+#include "SodaService.h"
+#include "Soda.h"
 
 
 
@@ -28,7 +30,7 @@ class ManagementUI
         void regester_pizza();
         void register_topping();
         void select_topping();
-        void menu();
+        void regester_soda();
 //        void registerOther(Other& other);
 
     private:
@@ -37,6 +39,7 @@ class ManagementUI
         ToppingService topping_service;
         WorkplaceService service_w;
         LowerCasevalidation lower;
+        SodaService soda;
 };
 
 #endif // MANAGMENTUI_H

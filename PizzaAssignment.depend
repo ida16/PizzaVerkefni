@@ -267,7 +267,7 @@
 	"../../include/models/Workplaces.h"
 	"../../include/UI/SalesUI.h"
 
-1513163638 c:\users\kristin\desktop\verkelgt\pizzaassignment\pizzaverkefni\include\ui\managementui.h
+1513172169 c:\users\kristin\desktop\verkelgt\pizzaassignment\pizzaverkefni\include\ui\managementui.h
 	<iostream>
 	<string>
 	"../models/Workplaces.h"
@@ -279,6 +279,8 @@
 	"../service/ToppingService.h"
 	"WorkplaceService.h"
 	"LowerCasevalidation.h"
+	"SodaService.h"
+	"Soda.h"
 
 1512992852 c:\users\lenovo\documents\github\pizzaverkefni\include\ui\managementui.h
 
@@ -477,7 +479,7 @@
 
 1512992330 source:c:\users\lenovo\documents\github\pizzaverkefni\src\ui\mainui.cpp
 
-1513163639 source:c:\users\kristin\desktop\verkelgt\pizzaassignment\pizzaverkefni\src\ui\managementui.cpp
+1513172405 source:c:\users\kristin\desktop\verkelgt\pizzaassignment\pizzaverkefni\src\ui\managementui.cpp
 	"../../include/UI/ManagementUI.h"
 
 1513163639 source:c:\users\kristin\desktop\verkelgt\pizzaassignment\pizzaverkefni\src\ui\salesui.cpp
@@ -501,4 +503,26 @@
 	<string>
 	<iostream>
 	"../models/Workplaces.h"
+
+1513172813 source:c:\users\kristin\desktop\verkelgt\pizzaassignment\pizzaverkefni\src\repositories\sodarepo.cpp
+	"SodaRepo.h"
+
+1513166110 c:\users\kristin\desktop\verkelgt\pizzaassignment\pizzaverkefni\include\repositories\sodarepo.h
+	"Soda.h"
+	<iostream>
+	<fstream>
+	<vector>
+
+1513169542 source:c:\users\kristin\desktop\verkelgt\pizzaassignment\pizzaverkefni\src\service\sodaservice.cpp
+	"SodaService.h"
+
+1513169513 c:\users\kristin\desktop\verkelgt\pizzaassignment\pizzaverkefni\include\service\sodaservice.h
+	"SodaRepo.h"
+
+1513172605 source:c:\users\kristin\desktop\verkelgt\pizzaassignment\pizzaverkefni\src\models\soda.cpp
+	"Soda.h"
+
+1513172405 c:\users\kristin\desktop\verkelgt\pizzaassignment\pizzaverkefni\include\models\soda.h
+	"string"
+	"iostream"
 
