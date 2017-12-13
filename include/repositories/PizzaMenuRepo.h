@@ -14,7 +14,7 @@ class PizzaMenuRepo
     public:
         PizzaMenuRepo();
         void read();
-        void write(PizzaMenu& pizza);
+        void write(PizzaMenu& menu);
 
     private:
         PizzaMenu menu;

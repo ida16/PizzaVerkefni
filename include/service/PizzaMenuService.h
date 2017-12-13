@@ -9,7 +9,8 @@ class PizzaMenuService
         PizzaMenuService();
         int number_locations();
         void print_line (int line_no);
-        void save(PizzaMenu& pizza);
+        void write(PizzaMenu& pizza);
+        void read();
 
     private:
         PizzaMenuRepo repo;
