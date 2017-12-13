@@ -5,27 +5,29 @@ WorkplacesRepo::WorkplacesRepo()
     //ctor
 }
 
-void WorkplacesRepo::save(workplaces& workplaces)
+void WorkplacesRepo::write(workplaces& workplaces)
 {
     //string name = "";
     ofstream fout;
     fout.open("workplaces.txt", ios::app);
     if(fout.is_open()){
-        fout << workplaces.get_name() << endl;
+        fout << workplaces;
     }
     fout.close();
 }
 
-void WorkplacesRepo::print()
+void WorkplacesRepo::read(vector<workplaces> wplace_vector)
 {
     ifstream fin;
     string str;
+    workplaces wplace;
     fin.open("workplaces.txt");
 
     if (fin.is_open()){
             while (!fin.eof()){
-                getline(fin,str);
-                cout << str << endl;
+                getline(fin,str, ',');
+                wplace.set_name(str);
+                wplace_vector.push_back(wplace);
             }
 
         fin.close();
@@ -36,41 +38,3 @@ void WorkplacesRepo::print()
     }
 }
 
-void WorkplacesRepo::print_line(int line_no){ // Prentar uppgefna línu eftir línunúmeri
-
-    ifstream fin;
-    string str;
-    // open file to search
-    fin.open("workplaces.txt");
-    if(fin.is_open()) {
-        unsigned int count_line = 0;
-        while(getline(fin, str)) {
-            count_line++;
-            if (count_line == line_no) {
-                cout << str << endl;
-            }
-        }
-                fin.close();
-    }
-    else cout << "Unable to open file.";
-
-}
-
-int WorkplacesRepo::number_locations()
-{
-    ifstream fin;
-    string str;
-    // open file to search
-    fin.open("workplaces.txt");
-    if(fin.is_open()) {
-        unsigned int count_line = 0;
-        while(getline(fin, str)) {
-            count_line++;
-        }
-        fin.close();
-        return count_line;
-    }
-    else {
-        cout << "Unable to open file.";
-    }
-}

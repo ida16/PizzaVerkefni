@@ -583,3 +583,167 @@
 	"Order.h"
 	"OrderRepo.h"
 
+1513172463 source:c:\users\oli\documents\github\pizzaverkefni\src\repositories\pizzamenurepo.cpp
+	"PizzaMenuRepo.h"
+
+1513172463 c:\users\oli\documents\github\pizzaverkefni\include\repositories\pizzamenurepo.h
+	<iostream>
+	<fstream>
+	<vector>
+	"../models/PizzaMenu.h"
+	<string>
+
+1513172682 c:\users\oli\documents\github\pizzaverkefni\include\models\pizzamenu.h
+	<string>
+	<istream>
+	<iostream>
+	<fstream>
+	"toppings.h"
+	<vector>
+	"Other.h"
+
+1513171656 c:\users\oli\documents\github\pizzaverkefni\include\models\toppings.h
+	<string>
+	<istream>
+	<iostream>
+	<fstream>
+
+1513171656 c:\users\oli\documents\github\pizzaverkefni\include\models\other.h
+	<string>
+	<iostream>
+	<fstream>
+
+1513171656 source:c:\users\oli\documents\github\pizzaverkefni\main.cpp
+	<iostream>
+	"include/UI/MainUI.h"
+
+1512834513 c:\users\oli\documents\github\pizzaverkefni\include\ui\mainui.h
+	"ManagementUI.h"
+	"SalesUI.h"
+	"KitchenUI.h"
+	"DeliveryUI.h"
+
+1513172329 c:\users\oli\documents\github\pizzaverkefni\include\ui\managementui.h
+	<iostream>
+	<string>
+	"../models/Workplaces.h"
+	"../models/Toppings.h"
+	"../models/Other.h"
+	"../models/PizzaMenu.h"
+	"../service/PizzaMenuService.h"
+	"../service/OtherService.h"
+	"../service/ToppingService.h"
+	"WorkplaceService.h"
+
+1513171656 c:\users\oli\documents\github\pizzaverkefni\include\models\workplaces.h
+	<string>
+	<iostream>
+	<fstream>
+
+1513171656 c:\users\oli\documents\github\pizzaverkefni\include\service\pizzamenuservice.h
+	"PizzaMenuRepo.h"
+
+1513171656 c:\users\oli\documents\github\pizzaverkefni\include\service\otherservice.h
+	"OtherRepo.h"
+	"../models/Other.h"
+
+1513171656 c:\users\oli\documents\github\pizzaverkefni\include\repositories\otherrepo.h
+	"../../include/models/Other.h"
+
+1513171656 c:\users\oli\documents\github\pizzaverkefni\include\service\toppingservice.h
+	<vector>
+	"../models/Toppings.h"
+	"../repositories/ToppingRepo.h"
+
+1513171656 c:\users\oli\documents\github\pizzaverkefni\include\repositories\toppingrepo.h
+	<string>
+	<iostream>
+	<fstream>
+	<vector>
+	"../models/Toppings.h"
+
+1513171656 c:\users\oli\documents\github\pizzaverkefni\include\ui\salesui.h
+	<iostream>
+	"../models/Toppings.h"
+	"../models/PizzaMenu.h"
+	"../models/Workplaces.h"
+	"../models/Other.h"
+	"../models/Order.h"
+	"../service/OrderService.h"
+
+1513171656 c:\users\oli\documents\github\pizzaverkefni\include\models\order.h
+	<iostream>
+	"PizzaMenu.h"
+
+1513171656 c:\users\oli\documents\github\pizzaverkefni\include\service\orderservice.h
+	"Order.h"
+	"OrderRepo.h"
+
+1513171656 c:\users\oli\documents\github\pizzaverkefni\include\repositories\orderrepo.h
+	<iostream>
+	<fstream>
+	<vector>
+	"Order.h"
+	<cstdlib>
+
+1513171656 c:\users\oli\documents\github\pizzaverkefni\include\ui\kitchenui.h
+	<iostream>
+	"../models/Toppings.h"
+	"../models/PizzaMenu.h"
+	"../models/Workplaces.h"
+	"../models/Other.h"
+	"WorkplacesRepo.h"
+
+1513171656 c:\users\oli\documents\github\pizzaverkefni\include\repositories\workplacesrepo.h
+	"../models/Workplaces.h"
+	<string>
+	<iostream>
+	<fstream>
+
+1513171656 c:\users\oli\documents\github\pizzaverkefni\include\ui\deliveryui.h
+	<iostream>
+	"../models/Toppings.h"
+	"../models/PizzaMenu.h"
+	"../models/Workplaces.h"
+	"../models/Other.h"
+
+1513171656 source:c:\users\oli\documents\github\pizzaverkefni\src\models\order.cpp
+	"Order.h"
+
+1513171656 source:c:\users\oli\documents\github\pizzaverkefni\src\models\other.cpp
+
+1513172633 source:c:\users\oli\documents\github\pizzaverkefni\src\models\pizzamenu.cpp
+	"../../include/models/PizzaMenu.h"
+	<string>
+	<istream>
+	<iostream>
+	<fstream>
+	"../../include/models/Toppings.h"
+	<vector>
+
+1513171656 source:c:\users\oli\documents\github\pizzaverkefni\src\models\toppings.cpp
+	"../../include/models/Toppings.h"
+
+1513171656 source:c:\users\oli\documents\github\pizzaverkefni\src\repositories\orderrepo.cpp
+	"OrderRepo.h"
+
+1513171656 source:c:\users\oli\documents\github\pizzaverkefni\src\repositories\otherrepo.cpp
+
+1513172249 c:\users\oli\documents\github\pizzaverkefni\include\service\workplaceservice.h
+	"WorkplacesRepo.h"
+	"Workplaces.h"
+
+1513172249 source:c:\users\oli\documents\github\pizzaverkefni\src\models\workplaces.cpp
+	"../../include/models/Workplaces.h"
+
+1513171656 source:c:\users\oli\documents\github\pizzaverkefni\src\repositories\toppingrepo.cpp
+	"ToppingRepo.h"
+
+1513171656 source:c:\users\oli\documents\github\pizzaverkefni\src\repositories\workplacesrepo.cpp
+	"WorkplacesRepo.h"
+
+1513171656 source:c:\users\oli\documents\github\pizzaverkefni\src\service\orderservice.cpp
+	"OrderService.h"
+
+1513171656 source:c:\users\oli\documents\github\pizzaverkefni\src\service\otherservice.cpp
+

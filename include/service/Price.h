@@ -10,7 +10,6 @@ class Price
 {
     public:
         Price();
-        virtual ~Price();
         void setPrice(double meat, double vegetable, double cheese);
         void setNumber(int numbMeat, int numbVegetable, int numbCheese);
         void txtPrice();
@@ -21,15 +20,8 @@ class Price
         void totalPrice();
 
         friend ostream& operator << (ostream& out, const Price& price);
+        friend istream& operator >> (istream& in, Price& price);
 
 
-    private:
-        double meat;
-        double vegetable;
-        double cheese;
-        int numbMeat;
-        int numbVegetable;
-        int numbCheese;
-};
 
 #endif // PRICE_H

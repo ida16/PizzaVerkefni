@@ -20,8 +20,8 @@ class PizzaMenu
         friend ostream& operator <<(ostream& out, PizzaMenu& pizza);
         friend istream& operator >>(istream& in, PizzaMenu& pizza);
         string getname();
-        int gettoppingCnt();
-        int getprice();
+        int get_topping_cnt();
+        int get_topping_price();
         string setname(string str);
         int settoppingCnt(int t);
         int setprice(int p);
