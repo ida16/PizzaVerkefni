@@ -43,7 +43,7 @@ void ManagementUI::main_mnu(){
             clear_screen();
             cout << "---Pizza Menu---" << endl;
             service.read();
-            cout << endl << cout << endl;
+            cout << endl << endl;
             cout << "---Soda Menu--" << endl;
             soda.read();
             cout << endl << endl << endl;
