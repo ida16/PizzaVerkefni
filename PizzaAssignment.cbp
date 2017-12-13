@@ -15,6 +15,7 @@
 					<Add option="-g" />
 					<Add directory="include/repositories" />
 					<Add directory="include/service" />
+					<Add directory="include/exception" />
 				</Compiler>
 			</Target>
 		</Build>
@@ -27,6 +28,7 @@
 		<Unit filename="include/UI/MainUI.h" />
 		<Unit filename="include/UI/ManagementUI.h" />
 		<Unit filename="include/UI/SalesUI.h" />
+		<Unit filename="include/exception/LowerCasevalidation.h" />
 		<Unit filename="include/models/Other.h" />
 		<Unit filename="include/models/PizzaMenu.h" />
 		<Unit filename="include/models/Toppings.h" />
@@ -39,12 +41,14 @@
 		<Unit filename="include/service/PizzaMenuService.h" />
 		<Unit filename="include/service/Price.h" />
 		<Unit filename="include/service/ToppingService.h" />
+		<Unit filename="include/service/WorkplaceService.h" />
 		<Unit filename="main.cpp" />
 		<Unit filename="src/UI/DeliveryUI.cpp" />
 		<Unit filename="src/UI/KitchenUI.cpp" />
 		<Unit filename="src/UI/MainUI.cpp" />
 		<Unit filename="src/UI/ManagementUI.cpp" />
 		<Unit filename="src/UI/SalesUI.cpp" />
+		<Unit filename="src/exception/LowerCasevalidation.cpp" />
 		<Unit filename="src/models/Other.cpp" />
 		<Unit filename="src/models/PizzaMenu.cpp" />
 		<Unit filename="src/models/Toppings.cpp" />
@@ -57,6 +61,7 @@
 		<Unit filename="src/service/PizzaMenuService.cpp" />
 		<Unit filename="src/service/Price.cpp" />
 		<Unit filename="src/service/ToppingService.cpp" />
+		<Unit filename="src/service/WorkplaceService.cpp" />
 		<Extensions>
 			<code_completion />
 			<envvars />
