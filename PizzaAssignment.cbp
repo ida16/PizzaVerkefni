@@ -37,6 +37,7 @@
 		<Unit filename="include/models/Workplaces.h" />
 		<Unit filename="include/repositories/OtherRepo.h" />
 		<Unit filename="include/repositories/PizzaMenuRepo.h" />
+		<Unit filename="include/repositories/SodaRepo.h" />
 		<Unit filename="include/repositories/ToppingRepo.h" />
 		<Unit filename="include/repositories/WorkplacesRepo.h" />
 		<Unit filename="include/service/OtherService.h" />
@@ -59,6 +60,7 @@
 		<Unit filename="src/models/Workplaces.cpp" />
 		<Unit filename="src/repositories/OtherRepo.cpp" />
 		<Unit filename="src/repositories/PizzaMenuRepo.cpp" />
+		<Unit filename="src/repositories/SodaRepo.cpp" />
 		<Unit filename="src/repositories/ToppingRepo.cpp" />
 		<Unit filename="src/repositories/WorkplacesRepo.cpp" />
 		<Unit filename="src/service/OtherService.cpp" />
