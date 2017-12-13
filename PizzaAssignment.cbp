@@ -16,6 +16,7 @@
 					<Add directory="include/repositories" />
 					<Add directory="include/service" />
 					<Add directory="include/exception" />
+					<Add directory="include/models" />
 				</Compiler>
 			</Target>
 		</Build>
@@ -31,6 +32,7 @@
 		<Unit filename="include/exception/LowerCasevalidation.h" />
 		<Unit filename="include/models/Other.h" />
 		<Unit filename="include/models/PizzaMenu.h" />
+		<Unit filename="include/models/Soda.h" />
 		<Unit filename="include/models/Toppings.h" />
 		<Unit filename="include/models/Workplaces.h" />
 		<Unit filename="include/repositories/OtherRepo.h" />
@@ -40,6 +42,7 @@
 		<Unit filename="include/service/OtherService.h" />
 		<Unit filename="include/service/PizzaMenuService.h" />
 		<Unit filename="include/service/Price.h" />
+		<Unit filename="include/service/SodaService.h" />
 		<Unit filename="include/service/ToppingService.h" />
 		<Unit filename="include/service/WorkplaceService.h" />
 		<Unit filename="main.cpp" />
@@ -51,6 +54,7 @@
 		<Unit filename="src/exception/LowerCasevalidation.cpp" />
 		<Unit filename="src/models/Other.cpp" />
 		<Unit filename="src/models/PizzaMenu.cpp" />
+		<Unit filename="src/models/Soda.cpp" />
 		<Unit filename="src/models/Toppings.cpp" />
 		<Unit filename="src/models/Workplaces.cpp" />
 		<Unit filename="src/repositories/OtherRepo.cpp" />
@@ -60,6 +64,7 @@
 		<Unit filename="src/service/OtherService.cpp" />
 		<Unit filename="src/service/PizzaMenuService.cpp" />
 		<Unit filename="src/service/Price.cpp" />
+		<Unit filename="src/service/SodaService.cpp" />
 		<Unit filename="src/service/ToppingService.cpp" />
 		<Unit filename="src/service/WorkplaceService.cpp" />
 		<Extensions>
