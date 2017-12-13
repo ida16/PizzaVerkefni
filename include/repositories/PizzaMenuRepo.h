@@ -4,11 +4,12 @@
 #include <iostream>
 #include <fstream>
 #include <vector>
-#include "../models/PizzaMenu.h"
 #include <string>
 
-using namespace std;
+#include "PizzaMenu.h"
 
+
+using namespace std;
 
 class PizzaMenuRepo
 {
@@ -18,7 +19,6 @@ class PizzaMenuRepo
         void write(PizzaMenu& pizza);
 
     private:
-        PizzaMenu menu;
 };
 
 #endif // PIZZAMENUREPO_H

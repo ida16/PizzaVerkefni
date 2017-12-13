@@ -586,11 +586,11 @@
 1513172463 source:c:\users\oli\documents\github\pizzaverkefni\src\repositories\pizzamenurepo.cpp
 	"PizzaMenuRepo.h"
 
-1513172463 c:\users\oli\documents\github\pizzaverkefni\include\repositories\pizzamenurepo.h
+1513187830 c:\users\oli\documents\github\pizzaverkefni\include\repositories\pizzamenurepo.h
 	<iostream>
 	<fstream>
 	<vector>
-	"../models/PizzaMenu.h"
+	"PizzaMenu.h"
 	<string>
 
 1513172682 c:\users\oli\documents\github\pizzaverkefni\include\models\pizzamenu.h
@@ -623,19 +623,20 @@
 	"KitchenUI.h"
 	"DeliveryUI.h"
 
-1513172329 c:\users\oli\documents\github\pizzaverkefni\include\ui\managementui.h
+1513175446 c:\users\oli\documents\github\pizzaverkefni\include\ui\managementui.h
 	<iostream>
 	<string>
 	"../models/Workplaces.h"
 	"../models/Toppings.h"
 	"../models/Other.h"
 	"../models/PizzaMenu.h"
+	"Price.h"
 	"../service/PizzaMenuService.h"
 	"../service/OtherService.h"
 	"../service/ToppingService.h"
 	"WorkplaceService.h"
 
-1513171656 c:\users\oli\documents\github\pizzaverkefni\include\models\workplaces.h
+1513174482 c:\users\oli\documents\github\pizzaverkefni\include\models\workplaces.h
 	<string>
 	<iostream>
 	<fstream>
@@ -694,7 +695,7 @@
 	"../models/Other.h"
 	"WorkplacesRepo.h"
 
-1513171656 c:\users\oli\documents\github\pizzaverkefni\include\repositories\workplacesrepo.h
+1513174705 c:\users\oli\documents\github\pizzaverkefni\include\repositories\workplacesrepo.h
 	"../models/Workplaces.h"
 	<string>
 	<iostream>
@@ -729,7 +730,8 @@
 
 1513171656 source:c:\users\oli\documents\github\pizzaverkefni\src\repositories\otherrepo.cpp
 
-1513172249 c:\users\oli\documents\github\pizzaverkefni\include\service\workplaceservice.h
+1513174610 c:\users\oli\documents\github\pizzaverkefni\include\service\workplaceservice.h
+	<vector>
 	"WorkplacesRepo.h"
 	"Workplaces.h"
 
@@ -746,4 +748,9 @@
 	"OrderService.h"
 
 1513171656 source:c:\users\oli\documents\github\pizzaverkefni\src\service\otherservice.cpp
+
+1513174173 c:\users\oli\documents\github\pizzaverkefni\include\service\price.h
+	<iostream>
+	<fstream>
+	<string>
 
