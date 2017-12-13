@@ -29,7 +29,7 @@ void MainUI::main() {
 
         if(selection == 'm'){
             clear_screen();
-            mainM.mainMenu();
+            mainM.main_mnu();
         }
         else if(selection == 's'){
             clear_screen();

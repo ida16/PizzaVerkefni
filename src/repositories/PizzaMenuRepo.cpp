@@ -4,24 +4,29 @@ PizzaMenuRepo::PizzaMenuRepo(){
     //ctor
 }
 void PizzaMenuRepo::print(){
-
+    vector<string> from_file;
     ifstream fin;
     string str;
     fin.open("Pizza-Menu.txt");
 
     if (fin.is_open()){
-            while (!fin.eof()){
-                getline(fin,str);
-                cout << str << endl;
+            while (getline(fin,str)){
+                from_file.push_back(str);
+                str = "";
+
             }
+        for(int i = 0; i < from_file.size(); i++){
+        cout << from_file[i] << endl;
 
         fin.close();
+    }
     }
     else{
 
         cout << "can not write in file, file is closed" << endl;
     }
-}
+    }
+
 
 void PizzaMenuRepo::save(PizzaMenu& menu){
  ofstream fout;
