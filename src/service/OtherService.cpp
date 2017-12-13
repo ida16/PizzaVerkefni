@@ -5,18 +5,17 @@ OtherService::OtherService(){
     //ctor
 }
 
-void OtherService::saveSoda(Other& other){
+void OtherService::save_soda(Other& other){
 
-    repo.saveSoda(other);
+    repo.save_soda(other);
 }
 
-void OtherService::saveBread(Other& other){
+void OtherService::save_bread(Other& other){
 
-    repo.saveBread(other);
+    repo.save_bread(other);
 }
 
-void OtherService::saveDessert(Other& other){
+void OtherService::save_dessert(Other& other){
 
-    repo.saveDessert(other);
+    repo.save_dessert(other);
 }*/
-

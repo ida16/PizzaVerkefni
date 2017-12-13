@@ -8,8 +8,7 @@
 
 using namespace std;
 
-MainUI::MainUI()
-{
+MainUI::MainUI() {
     //ctor
 }
 
@@ -29,19 +28,19 @@ void MainUI::main() {
 
         if(selection == 'm'){
             clear_screen();
-            mainM.mainMenu();
+            main_m.main_menu();
         }
         else if(selection == 's'){
             clear_screen();
-            mainS.sales();
+            main_s.sales();
         }
         else if(selection == 'k'){
             clear_screen();
-            mainK.kitchen();
+            main_k.kitchen();
         }
         else if(selection == 'd'){
             clear_screen();
-            mainD.delivery();
+            main_d.delivery();
         }
         else if(selection == 'q'){
             running = false;
@@ -55,10 +54,3 @@ void MainUI::clear_screen(){
         cout << endl;
     }
 }
-
-
-
-
-
-
-

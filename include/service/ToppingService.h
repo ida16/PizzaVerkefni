@@ -10,7 +10,7 @@ class ToppingService
     public:
         ToppingService();
         void write(Toppings& topping);
-        void read(vector<Toppings>& toppingVector);
+        void read(vector<Toppings>& topping_vector);
 
     private:
         ToppingRepo repo;

@@ -10,14 +10,15 @@
 
 PizzaMenu::PizzaMenu(){
 
-    int toppingCnt = 0;
+    int topping_cnt = 0;
     string name = "";
     int price = 0;
 }
 
-PizzaMenu::PizzaMenu(string name, int toppingCnt){
+PizzaMenu::PizzaMenu(string name, int topping_cnt){
+
     this -> name = name;
-    this -> toppingCnt = toppingCnt;
+    this -> topping_cnt = topping_cnt;
 
 }
 
@@ -29,43 +30,41 @@ ostream& operator <<(ostream& out, PizzaMenu& pizza){
 istream& operator >>(istream& in, PizzaMenu& pizza){
 
     return in;
+}
+
+string PizzaMenu::get_name() {
+
+    this -> name  = name;
+    return name;
 
 }
 
-string PizzaMenu::getname() {
+int PizzaMenu::get_topping_cnt(){
 
-this -> name  = name;
-return name;
-
-}
-
-int PizzaMenu::gettoppingCnt(){
-
-    this -> toppingCnt = toppingCnt;
-    return toppingCnt;
+    this -> topping_cnt = topping_cnt;
+    return topping_cnt;
 }
 
 
-int PizzaMenu::getprice(){
+int PizzaMenu::get_price(){
 
     this -> price = price;
     return price;
 }
 
 
-string PizzaMenu::setname(string str) {
+string PizzaMenu::set_name(string str) {
 
     this -> name = str;
-
 }
 
-int PizzaMenu::settoppingCnt(int t){
+int PizzaMenu::set_topping_cnt(int t){
 
-   this -> toppingCnt = t;
+   this -> topping_cnt = t;
 }
 
 
-int PizzaMenu::setprice(int p){
+int PizzaMenu::set_price(int p){
 
     this -> price = p;
 }

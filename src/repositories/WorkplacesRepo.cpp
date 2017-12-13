@@ -1,12 +1,10 @@
 #include "WorkplacesRepo.h"
 
-WorkplacesRepo::WorkplacesRepo()
-{
+WorkplacesRepo::WorkplacesRepo() {
     //ctor
 }
 
-void WorkplacesRepo::save(workplaces& workplaces)
-{
+void WorkplacesRepo::save(workplaces& workplaces) {
     //string name = "";
     ofstream fout;
     fout.open("workplaces.txt", ios::app);
@@ -16,8 +14,7 @@ void WorkplacesRepo::save(workplaces& workplaces)
     fout.close();
 }
 
-void WorkplacesRepo::print()
-{
+void WorkplacesRepo::print() {
     ifstream fin;
     string str;
     fin.open("workplaces.txt");
@@ -32,7 +29,7 @@ void WorkplacesRepo::print()
     }
     else
     {
-        cout << "can not write in file, file is closed" << endl;
+        cout << "File is closed" << endl;
     }
 }
 
@@ -56,8 +53,7 @@ void WorkplacesRepo::print_line(int line_no){ // Prentar uppgefna línu eftir lín
 
 }
 
-int WorkplacesRepo::number_locations()
-{
+int WorkplacesRepo::number_locations() {
     ifstream fin;
     string str;
     // open file to search

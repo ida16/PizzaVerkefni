@@ -6,12 +6,12 @@ PizzaMenuService::PizzaMenuService(){
 }
 
 void PizzaMenuService::save(PizzaMenu& menu){
-    repo.write(menu);
 
+    repo.write(menu);
 }
 
-int PizzaMenuService::number_locations()
-{
+int PizzaMenuService::number_locations() {
+
     ifstream fin;
     string str;
     // open file to search
@@ -25,7 +25,6 @@ int PizzaMenuService::number_locations()
         return count_line;
     }
     else cout << "Unable to open file.";
-
 }
 
 void PizzaMenuService::print_line (int line_no){ // Prentar uppgefna línu eftir línunúmeri
@@ -42,9 +41,7 @@ void PizzaMenuService::print_line (int line_no){ // Prentar uppgefna línu eftir 
                 cout << str << endl;
             }
         }
-                fin.close();
+        fin.close();
     }
     else cout << "Unable to open file.";
 }
-
-

@@ -1,26 +1,22 @@
 #include "../../include/service/Price.h"
 
-Price::Price()
-{
+Price::Price() {
     meat = 0.0;
     vegetable = 0.0;
     cheese = 0.0;
 }
 
-Price::~Price()
-{
+Price::~Price() {
     //dtor
 }
 
-void Price::setPrice(double meat, double vegetable, double cheese)
-{
+void Price::set_price(double meat, double vegetable, double cheese) {
     this->meat = meat;
     this->vegetable = vegetable;
     this->cheese = cheese;
 }
 
-void Price::txtPrice()
-{
+void Price::txt_price() {
     cout << "What is the price of meat? ";
     cin >> meat;
     cout << "What is the price of vegetables? ";
@@ -40,8 +36,7 @@ void Price::txtPrice()
     fout.close();
 }
 
-void Price::printPrice()
-{
+void Price::print_price() {
     string str;
     ifstream fin;
     fin.open("PriceList.txt");
@@ -64,8 +59,7 @@ void Price::printPrice()
     }
 }
 
-/*void Price::readPrice()
-{
+/*void Price::read_price() {
     cout << "What is the price of meat? ";
     cin >> meat;
     cout << "What is the price of vegetables? ";
@@ -75,43 +69,38 @@ void Price::printPrice()
     cout << endl;
 }*/
 
-void Price::setNumber(int numbMeat, int numbVegetable, int numbCheese)
-{
-    this->numbMeat = numbMeat;
-    this->numbVegetable = numbVegetable;
-    this->numbCheese = numbCheese;
+void Price::set_number(int numb_meat, int numb_vegetable, int numb_cheese) {
+    this->numb_meat = numb_meat;
+    this->numb_vegetable = numb_vegetable;
+    this->numb_cheese = numb_cheese;
 }
 
-void Price::multipleTopping()
-{
+void Price::multiple_topping() {
     cout << "How many toppings of meat do you want? ";
-    cin >> numbMeat;
+    cin >> numb_meat;
     cout << "How many toppings of vegetables do you want? ";
-    cin >> numbVegetable;
+    cin >> numb_vegetable;
     cout << "How many layers of extra cheese do you want? ";
-    cin >> numbCheese;
+    cin >> numb_cheese;
     cout << endl;
 
 }
 
-void Price::calcTopping()
-{
-    meat = numbMeat*meat;
-    vegetable = numbVegetable*vegetable;
-    cheese = numbCheese*cheese;
+void Price::calc_topping() {
+    meat = numb_meat*meat;
+    vegetable = numb_vegetable*vegetable;
+    cheese = numb_cheese*cheese;
 }
 
-void Price::totalPrice()
-{
-    cout << "Total price for your pizza with " << numbMeat << " toppings of meat, ";
-    cout << numbVegetable << " toppings of vegetables and " << numbCheese << " layers of extra cheese is: ";
+void Price::total_price() {
+    cout << "Total price for your pizza with " << numb_meat << " toppings of meat, ";
+    cout << numb_vegetable << " toppings of vegetables and " << numb_cheese << " layers of extra cheese is: ";
     cout << meat+vegetable+cheese << endl;
 
     cout << endl;
 }
 
-ostream& operator << (ostream& out, const Price& price)
-{
+ostream& operator << (ostream& out, const Price& price) {
     out << "The price for meat is: " << price.meat << endl;
     out << "The price vegetables is: " << price.vegetable << endl;
     out << "The price for cheese is: " << price.cheese << endl;

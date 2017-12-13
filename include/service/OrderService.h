@@ -11,7 +11,7 @@ class OrderService
         OrderService();
         void write(Order& order);
         int price(Order& order);
-        void statusUpdate(Order& order);
+        void status_update(Order& order);
 
     private:
         OrderRepo repo;

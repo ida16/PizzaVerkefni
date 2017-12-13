@@ -1,7 +1,6 @@
 #include "../../include/UI/DeliveryUI.h"
 
-DeliveryUI::DeliveryUI()
-{
+DeliveryUI::DeliveryUI() {
     //ctor
 }
 

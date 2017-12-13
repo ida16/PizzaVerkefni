@@ -25,8 +25,8 @@ istream& operator >>(istream& in, workplaces& workplace){
     return in;
 }
 
-/*void workplaces::save()
-{
+/*void workplaces::save() {
+
     ofstream fout;
     fout.open("workplaces.txt", ios::app);
     if(fout.is_open()){
@@ -35,8 +35,8 @@ istream& operator >>(istream& in, workplaces& workplace){
     fout.close();
 }
 
-void workplaces::print()
-{
+void workplaces::print() {
+
     ifstream fin;
     string str;
     fin.open("workplaces.txt");
@@ -49,8 +49,7 @@ void workplaces::print()
 
         fin.close();
     }
-    else
-    {
+    else {
         cout << "can not write in file, file is closed" << endl;
     }
 }
@@ -75,8 +74,8 @@ void workplaces::print_line(int line_no){ // Prentar uppgefna línu eftir línunúm
 
 }*/
 
-/*void workplaces::start_register()
-{
+/*void workplaces::start_register() {
+
     char input = 'y';
 
     while (input == 'y'|| input == 'Y')
@@ -91,8 +90,7 @@ void workplaces::print_line(int line_no){ // Prentar uppgefna línu eftir línunúm
     }
 }*/
 /*
-int workplaces::number_locations()
-{
+int workplaces::number_locations() {
     ifstream fin;
     string str;
     // open file to search

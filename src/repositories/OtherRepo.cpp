@@ -1,40 +1,37 @@
 /*#include "OtherRepo.h"
 
-OtherRepo::OtherRepo()
-{
+OtherRepo::OtherRepo() {
     //ctor
 }
 
-void OtherRepo::saveSoda(Other& other)
-{
+void OtherRepo::save_soda(Other& other) {
     ofstream fout;
     fout.open("Soda.txt", ios::app);
     if(fout.is_open()) {
-        fout << other.getsoda() << endl;
+        fout << other.get_soda() << endl;
     }
     fout.close();
 }
 
-void OtherRepo::saveBread(Other& other)
-{
+void OtherRepo::save_bread(Other& other) {
     ofstream fout;
     fout.open("Bread.txt", ios::app);
     if(fout.is_open()) {
-        fout << other.getbread() << endl;
+        fout << other.get_bread() << endl;
     }
     fout.close();
 }
-void OtherRepo::saveDessert(Other& other)
-{
+
+void OtherRepo::save_dessert(Other& other) {
     ofstream fout;
-    fout.open("Desert.txt", ios::app);
+    fout.open("Dessert.txt", ios::app);
     if(fout.is_open()) {
-        fout << other.getdessert() << endl;
+        fout << other.get_dessert() << endl;
     }
     fout.close();
 }
-void Other::printSoda()
-{
+
+void Other::print_soda() {
     ifstream fin;
     string str;
     fin.open("Soda.txt");
@@ -51,8 +48,7 @@ void Other::printSoda()
     }
 }
 
-void Other::printBread()
-{
+void Other::print_bread() {
     ifstream fin;
     string str;
     fin.open("Bread.txt");
@@ -69,11 +65,10 @@ void Other::printBread()
     }
 }
 
-void Other::printDesert()
-{
+void Other::print_dessert() {
     ifstream fin;
     string str;
-    fin.open("Desert.txt");
+    fin.open("Dessert.txt");
 
     if(fin.is_open()) {
         while (!fin.eof()) {

@@ -1,9 +1,7 @@
 #ifndef ORDER_H
 #define ORDER_H
 
-
 #include <iostream>
-
 #include "PizzaMenu.h"
 
 using namespace std;
@@ -27,7 +25,7 @@ class Order
         friend istream& operator >> (istream& in, Order& order);
 
     private:
-        vector<PizzaMenu> pizzaVector;  // vector af pizzum?
+        vector<PizzaMenu> pizza_vector;  // vector af pizzum?
         int loc_no;
         bool paid;
         bool delivery;

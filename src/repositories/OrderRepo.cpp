@@ -1,7 +1,6 @@
 #include "OrderRepo.h"
 
-OrderRepo::OrderRepo()
-{
+OrderRepo::OrderRepo() {
     //ctor
 }
 
@@ -40,17 +39,13 @@ OrderRepo::OrderRepo()
         fin.close();
     }
     else{
-
         cout << "can not write in file, file is closed" << endl;
     }
     for(size_t i = 0; i < or  .size(); i++){
         cout << order_from_file[i] << endl;
 }
 
-
-
-//void read(vector<Order>& order_vector)
-//{
+//void read(vector<Order>& order_vector) {
     /*ifstream fin;
     string str;
     fin.open("activeorders.txt");
@@ -64,7 +59,7 @@ OrderRepo::OrderRepo()
             }
 
         fin.close();
-        toppingVector.pop_back();
+        topping_vector.pop_back();
     }
     else{
 
@@ -72,8 +67,7 @@ OrderRepo::OrderRepo()
     }*/
 //}*/
 
-void OrderRepo::write(Order& order)
-{
+void OrderRepo::write(Order& order) {
     ofstream fout;
     fout.open("activeorders.txt", ios::app);
     if(fout.is_open()){

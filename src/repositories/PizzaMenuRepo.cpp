@@ -6,7 +6,8 @@ PizzaMenuRepo::PizzaMenuRepo(){
 
 
 void PizzaMenuRepo::write(PizzaMenu& menu){
- ofstream fout;
+
+    ofstream fout;
     fout.open("Pizza-Menu.txt", ios::app);
     if(fout.is_open()){
         fout << menu;
@@ -34,9 +35,6 @@ void PizzaMenuRepo::read(){
     }
 
     else{
-
-        cout << "can not write in file, file is closed" << endl;
+        cout << "File is closed" << endl;
     }
 }
-
-

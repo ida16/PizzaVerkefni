@@ -15,7 +15,7 @@ int OrderService::price(Order& order){
 
 }
 
-void OrderService::statusUpdate(Order& order){
+void OrderService::status_update(Order& order){
     order.status_advance();
     int status = order.get_status();
 

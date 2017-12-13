@@ -15,25 +15,24 @@ void ToppingRepo::write(Toppings& toppings){
     fout.close();
 }
 
-void ToppingRepo::read(vector<Toppings>& toppingVector){
+void ToppingRepo::read(vector<Toppings>& topping_vector){
 
     ifstream fin;
     string str;
     fin.open("toppings.txt");
 
-
     if (fin.is_open()){
             while (!fin.eof()){
                 getline(fin,str, ',');
                 Toppings topping(str);
-                toppingVector.push_back(topping);
+                topping_vector.push_back(topping);
             }
 
         fin.close();
-        toppingVector.pop_back();
+        topping_vector.pop_back();
     }
     else{
 
-        cout << "can not write in file, file is closed" << endl;
+        cout << "File is closed" << endl;
     }
 }

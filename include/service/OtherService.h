@@ -8,12 +8,12 @@ class OtherService
 {
     public:
         OtherService();
-        void saveSoda(Other& other);
-        void saveBread(Other& other);
-        void saveDessert(Other& other);
-        void printSoda();
-        void printBread();
-        void printDesert();
+        void save_soda(Other& other);
+        void save_bread(Other& other);
+        void save_dessert(Other& other);
+        void print_soda();
+        void print_bread();
+        void print_dessert();
 
     private:
         OtherRepo repo;

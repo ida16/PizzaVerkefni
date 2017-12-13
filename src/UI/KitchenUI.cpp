@@ -1,7 +1,6 @@
 #include "../../include/UI/KitchenUI.h"
 
-KitchenUI::KitchenUI()
-{
+KitchenUI::KitchenUI() {
     //ctor
 }
 
@@ -47,7 +46,6 @@ void KitchenUI::kitchen(){
                 running = false;
             }
         }
-
     }
 }
 

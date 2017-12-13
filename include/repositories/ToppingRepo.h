@@ -13,7 +13,7 @@ class ToppingRepo
     public:
         ToppingRepo();
         void write(Toppings& toppings);
-        void read(vector<Toppings>& toppingVector);
+        void read(vector<Toppings>& topping_vector);
 
     private:
 

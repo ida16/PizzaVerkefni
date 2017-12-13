@@ -30,7 +30,7 @@ int Order::get_loc_no(){
 }
 
 void Order::push_pizza(PizzaMenu& pizza){
-    this->pizzaVector.push_back(pizza);
+    this->pizza_vector.push_back(pizza);
 }
 
 void Order::set_loc_no(int loc_no){
@@ -55,10 +55,12 @@ void Order::status_advance(){
 
 ostream& operator << (ostream& out, Order& order){
     out << order.loc_no << order.paid << "," << order.delivery << "," << order.price << "," << order.status << ",";
+
     return out;
 }
 
 istream& operator >> (istream& in, Order& order){
     in >> order.loc_no >> order.paid >> order.delivery >> order.price >> order.status;
+
     return in;
 }

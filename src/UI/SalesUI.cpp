@@ -1,7 +1,6 @@
 #include "../../include/UI/SalesUI.h"
 
-SalesUI::SalesUI()
-{
+SalesUI::SalesUI() {
     //ctor
 }
 
@@ -44,8 +43,8 @@ void SalesUI::clear_screen(){
     }
 }
 
-void SalesUI::new_order()
-{
+void SalesUI::new_order() {
+
     char input;
     // Kalla í pizzuval til að velja pizzu í order
     // Pizzuval sækir vector af pizzum og prentar á sk´ja
@@ -83,6 +82,4 @@ void SalesUI::new_order()
     ///Order order(pizza, loc, paid, delivery, price);
     ///order_service.write(order);
     // Senda order niður í Service klasa sem sendir í Repo og skrifar í skjal.
-
-
 }

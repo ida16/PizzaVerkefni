@@ -19,15 +19,15 @@ class PizzaMenu
         PizzaMenu(string name,  int toppingCnt);
         friend ostream& operator <<(ostream& out, PizzaMenu& pizza);
         friend istream& operator >>(istream& in, PizzaMenu& pizza);
-        string getname();
-        int gettoppingCnt();
-        int getprice();
-        string setname(string str);
-        int settoppingCnt(int t);
-        int setprice(int p);
-        vector <string> pizzaToppings;
+        string get_name();
+        int get_topping_cnt();
+        int get_price();
+        string set_name(string str);
+        int set_topping_cnt(int t);
+        int set_price(int p);
+        vector <string> pizza_toppings;
     private:
-        int toppingCnt;
+        int topping_cnt;
         string name;
         int price;
 };
