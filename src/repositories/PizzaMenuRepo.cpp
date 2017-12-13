@@ -5,7 +5,7 @@ PizzaMenuRepo::PizzaMenuRepo(){
 }
 
 
-void PizzaMenuRepo::write(PizzaMenu& menu){
+void PizzaMenuRepo::save(PizzaMenu& menu){
  ofstream fout;
     fout.open("Pizza-Menu.txt", ios::app);
     if(fout.is_open()){

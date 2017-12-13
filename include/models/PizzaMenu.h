@@ -26,10 +26,13 @@ class PizzaMenu
         int settoppingCnt(int t);
         int setprice(int p);
         vector <string> pizzaToppings;
+        int finalPrice();
     private:
         int toppingCnt;
         string name;
         int price;
+        int const basePrice = 1200;
+        int const toppingPrice = 250;
 };
 
 #endif // PIZZAMENU_H

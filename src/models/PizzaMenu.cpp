@@ -18,10 +18,17 @@ PizzaMenu::PizzaMenu(){
 PizzaMenu::PizzaMenu(string name, int toppingCnt){
     this -> name = name;
     this -> toppingCnt = toppingCnt;
+    int price = 0;
 
 }
 
 ostream& operator <<(ostream& out, PizzaMenu& pizza){
+    out << pizza.name << ", " << pizza.price << ", ";
+    for (int i = 0; i < pizza.gettoppingCnt(); i++)
+        {
+            out << pizza.pizzaToppings[i] << ", ";
+        }
+    out << endl;
 
     return out;
 }
@@ -68,4 +75,11 @@ int PizzaMenu::settoppingCnt(int t){
 int PizzaMenu::setprice(int p){
 
     this -> price = p;
+}
+
+int PizzaMenu::finalPrice(){
+
+    price = basePrice + (toppingCnt * toppingPrice);
+    return price;
+
 }

@@ -13,7 +13,7 @@ void ManagementUI::mainMenu(){
         cout << "t : Register Toppings" << endl;
         cout << "m : Register Menu items" << endl;
         cout << "s : Read Menu items" << endl;
-        //cout << "p : Register Prices" << endl;
+       // cout << "p : Register Prices" << endl;
         cout << "l : Register Locations" << endl;
         cout << "r : Return" << endl;
 
@@ -31,12 +31,12 @@ void ManagementUI::mainMenu(){
         }
         else if(selection == 's'){
             clear_screen();
-            service.read();
-        }
-       // else if(selection == 'p'){
-         //   clear_screen();
 
-        //}
+        }
+        else if(selection == 'p'){
+            clear_screen();
+
+        }
         else if(selection == 'l'){
             clear_screen();
             registerLocation();
@@ -57,13 +57,16 @@ void ManagementUI::regesterPizza() {
 
     while (inpute == 'y'|| inpute == 'Y')
     {   clear_screen();
+        //PizzaMenu pizza;
 
         cout << "Name of the pizza? ";
         cin >> name;
+        //pizza.setname(str);
         cout << "How many toppings are on " << name << " ? ";
         cin >> t;
         PizzaMenu pizza(name,t);
 
+       // pizza.settoppingCnt(t);
         cout << "What toppings are on " << name << " ? ";
         for (int i = 0; i < t; i++)
         {
@@ -72,8 +75,9 @@ void ManagementUI::regesterPizza() {
 
             pizza.pizzaToppings.push_back(str);
         }
+        pizza.finalPrice();
 
-           service.write(pizza);
+           service.save(pizza);
 
         cout << "Do you want to regestir more pizza's on the menu 'y' for yes or 'n' for no: ";
         cin >> inpute;
