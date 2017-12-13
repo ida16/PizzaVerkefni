@@ -479,7 +479,7 @@
 
 1512992330 source:c:\users\lenovo\documents\github\pizzaverkefni\src\ui\mainui.cpp
 
-1513172405 source:c:\users\kristin\desktop\verkelgt\pizzaassignment\pizzaverkefni\src\ui\managementui.cpp
+1513186224 source:c:\users\kristin\desktop\verkelgt\pizzaassignment\pizzaverkefni\src\ui\managementui.cpp
 	"../../include/UI/ManagementUI.h"
 
 1513163639 source:c:\users\kristin\desktop\verkelgt\pizzaassignment\pizzaverkefni\src\ui\salesui.cpp
@@ -504,7 +504,7 @@
 	<iostream>
 	"../models/Workplaces.h"
 
-1513172813 source:c:\users\kristin\desktop\verkelgt\pizzaassignment\pizzaverkefni\src\repositories\sodarepo.cpp
+1513186452 source:c:\users\kristin\desktop\verkelgt\pizzaassignment\pizzaverkefni\src\repositories\sodarepo.cpp
 	"SodaRepo.h"
 
 1513166110 c:\users\kristin\desktop\verkelgt\pizzaassignment\pizzaverkefni\include\repositories\sodarepo.h
@@ -519,10 +519,10 @@
 1513169513 c:\users\kristin\desktop\verkelgt\pizzaassignment\pizzaverkefni\include\service\sodaservice.h
 	"SodaRepo.h"
 
-1513172605 source:c:\users\kristin\desktop\verkelgt\pizzaassignment\pizzaverkefni\src\models\soda.cpp
+1513186308 source:c:\users\kristin\desktop\verkelgt\pizzaassignment\pizzaverkefni\src\models\soda.cpp
 	"Soda.h"
 
-1513172405 c:\users\kristin\desktop\verkelgt\pizzaassignment\pizzaverkefni\include\models\soda.h
+1513184743 c:\users\kristin\desktop\verkelgt\pizzaassignment\pizzaverkefni\include\models\soda.h
 	"string"
 	"iostream"
 

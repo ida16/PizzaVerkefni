@@ -11,11 +11,10 @@ void ManagementUI::main_mnu(){
     while (running == true){
         cout << endl << "  -MANAGEMENT-" << endl << endl;
         cout << "t : Register Toppings" << endl;
-        cout << "m : Register Pizza on Menu" << endl;
+        cout << "p : Register Pizza on Menu" << endl;
         cout << "s : Register Soda on menu" << endl;
-        //cout << "p : Register Prices" << endl;
         cout << "l : Register Locations" << endl;
-        cout << "p : Read Menu items" << endl;
+        cout << "m : Read Menu items" << endl;
         cout << "r : Return" << endl;
 
         cin >> selection;
@@ -25,7 +24,7 @@ void ManagementUI::main_mnu(){
             register_topping();
 
         }
-        else if(selection == 'm'|| selection == 'M'){
+        else if(selection == 'p'|| selection == 'P'){
             clear_screen();
             regester_pizza();
 
@@ -35,17 +34,23 @@ void ManagementUI::main_mnu(){
             regester_soda();
 
         }
-        else if(selection == 'p'){
-            clear_screen();
-        }
         else if(selection == 'l'|| selection == 'L'){
             clear_screen();
             register_location();
         }
-        else if(selection == 'p'|| selection == 'P'){
+        else if(selection == 'm'|| selection == 'M'){
+
             clear_screen();
+            cout << "---Pizza Menu---" << endl;
             service.read();
+            cout << endl << cout << endl;
+            cout << "---Soda Menu--" << endl;
+            soda.read();
+            cout << endl << endl << endl;
+
         }
+
+
 
         else if(selection == 'r'|| selection == 'R'){
             clear_screen();
@@ -54,7 +59,6 @@ void ManagementUI::main_mnu(){
         }
     }
 }
-
 void ManagementUI::regester_pizza() {
 
     char input = 'y';
@@ -65,7 +69,6 @@ void ManagementUI::regester_pizza() {
 
     while (input == 'y'|| input == 'Y')
     {   clear_screen();
-        //PizzaMenu pizza;
         cout << "Please register the name and toppings of the pizza." << endl << endl << endl;
         cout << "Name of the pizza? ";
         cin >> name;
@@ -151,11 +154,12 @@ void ManagementUI::regester_soda(){
     char s;
     cin >> s;
     cout << endl;
-    Soda sodas(str,soda.final_price(s));
+    Soda sodas(str, s, soda.final_price(s));
     soda.write(sodas);
     clear_screen();
     cout << "Do you want to register more soda on the menu 'y' for yes or 'n' for no: ";
     cin >> input;
+    clear_screen();
     }
     while (input == 'y' || input == 'y');
 

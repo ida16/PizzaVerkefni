@@ -5,8 +5,9 @@ Soda::Soda()
     //ctor
 }
 
-Soda::Soda(string name, int price){
+Soda::Soda(string name,char size, int price){
 this -> name = name;
+this -> size = size;
 this -> price = price;
 }
 
@@ -26,7 +27,7 @@ char Soda::get_size(){
 }
 
 ostream& operator << (ostream& out, Soda& soda){
-  out << soda.name << "," << soda.size << "," << soda.price << endl;
+  out << soda.name << "," << soda.size << "," << soda.price;
 
     return out;
 }

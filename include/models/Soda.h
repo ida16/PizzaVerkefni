@@ -10,7 +10,7 @@ class Soda
 {
     public:
         Soda();
-        Soda(string name, int price);
+        Soda(string name, char size, int price);
         string get_soda();
         string set_soda(string str);
         char get_size();
