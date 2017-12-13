@@ -5,8 +5,12 @@ PizzaMenuService::PizzaMenuService(){
     //ctor
 }
 
-void PizzaMenuService::save(PizzaMenu& menu){
-    repo.save(menu);
+void PizzaMenuService::write(PizzaMenu& menu){
+    repo.write(menu);
+
+}
+void PizzaMenuService::read(){
+    repo.read();
 
 }
 
@@ -42,9 +46,38 @@ void PizzaMenuService::print_line (int line_no){ // Prentar uppgefna línu eftir 
                 cout << str << endl;
             }
         }
-                fin.close();
+            fin.close();
     }
     else cout << "Unable to open file.";
 }
 
+int PizzaMenuService::final_price(PizzaMenu& pizza, int price){
 
+    int t = 0;
+    t = price + (pizza.get_topping_cnt() * pizza.get_topping_price());
+    return pizza.set_price(t);
+
+}
+
+int PizzaMenuService::size_price(char input){
+
+    //if(validate_input(input)) {
+
+    if (input == '1'){
+
+        this -> price_s = 1200;
+        return price_s;
+
+    }
+    else if (input == '2') {
+
+        this -> price_s = 1600;
+        return price_s;
+
+    }
+    else if (input == '3'){
+
+        this -> price_s = 1800;
+        return price_s;
+    }
+    }

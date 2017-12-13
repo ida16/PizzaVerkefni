@@ -44,7 +44,7 @@ void ManagementUI::main_mnu(){
         }
         else if(selection == 'p'|| selection == 'P'){
             clear_screen();
-            //service.print();
+            service.read();
         }
 
         else if(selection == 'r'|| selection == 'R'){
@@ -77,7 +77,7 @@ void ManagementUI::regester_pizza() {
 
         cout << "How many toppings are on " << name << "? ";
         cin >> t;
-        PizzaMenu pizza(name,t,s);
+        PizzaMenu pizza(lower.switch_to_lower(name),t,s);
         cout << "What toppings are on " << name << " ? ";
         for (int i = 0; i < t; i++)
         {
@@ -113,7 +113,7 @@ void ManagementUI::register_topping()
         cout << "Name of the topping? ";
         cin >> str;
 
-        Toppings topping(str);
+        Toppings topping(lower.switch_to_lower(str));
 
         topping_service.write(topping);
 

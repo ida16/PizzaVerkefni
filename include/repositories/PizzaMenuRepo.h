@@ -13,8 +13,8 @@ class PizzaMenuRepo
 {
     public:
         PizzaMenuRepo();
-        void print();
-        void save(PizzaMenu& pizza);
+        void read();
+        void write(PizzaMenu& pizza);
 
     private:
         PizzaMenu menu;

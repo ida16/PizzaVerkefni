@@ -10,6 +10,8 @@
 #include "../service/PizzaMenuService.h"
 #include "../service/OtherService.h"
 #include "../service/ToppingService.h"
+#include "WorkplaceService.h"
+#include "LowerCasevalidation.h"
 
 
 
@@ -32,7 +34,9 @@ class ManagementUI
     private:
         PizzaMenuService service;
  //       OtherService otherservice;
-        ToppingService toppingservice;
+        ToppingService topping_service;
+        WorkplaceService service_w;
+        LowerCasevalidation lower;
 };
 
 #endif // MANAGMENTUI_H

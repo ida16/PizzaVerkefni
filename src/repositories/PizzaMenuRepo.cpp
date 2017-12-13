@@ -3,7 +3,7 @@
 PizzaMenuRepo::PizzaMenuRepo(){
     //ctor
 }
-void PizzaMenuRepo::print(){
+void PizzaMenuRepo::read(){
     vector<string> from_file;
     ifstream fin;
     string str;
@@ -28,7 +28,7 @@ void PizzaMenuRepo::print(){
     }
 
 
-void PizzaMenuRepo::save(PizzaMenu& menu){
+void PizzaMenuRepo::write(PizzaMenu& menu){
  ofstream fout;
     fout.open("Pizza-Menu.txt", ios::app);
     if(fout.is_open()){
