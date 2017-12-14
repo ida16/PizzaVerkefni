@@ -10,6 +10,7 @@ class PriceService
         PriceService();
         void write(Price& price);
         void read(Price& price);
+        int calculate(int toppingCnt, int sizeprice);
 
     private:
         PriceRepo repo;

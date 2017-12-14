@@ -7,7 +7,7 @@
 #include "../models/PizzaMenu.h"
 #include "../models/Workplaces.h"
 #include "../models/Other.h"
-#include "WorkplacesRepo.h"
+#include "WorkplaceService.h"
 
 
 class KitchenUI
@@ -19,6 +19,7 @@ class KitchenUI
 
 
     private:
+        WorkplaceService w_place;
 };
 
 #endif // KITCHENUI_H

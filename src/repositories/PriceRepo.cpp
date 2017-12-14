@@ -24,10 +24,7 @@ void PriceRepo::read(Price& price)
     fin.open("PriceList.txt");
     if(fin.is_open()) {
         while(!fin.eof()) {
-            getline(fin, str, ',');
-            input = atoi(str.c_str());
-            price.read_in(input, counter);
-            counter++;
+            fin >> price;
         }
     }
     else {

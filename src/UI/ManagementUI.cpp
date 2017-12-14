@@ -17,7 +17,7 @@ void ManagementUI::main_menu(){
         //cout << "s : Register Sizes" << endl;
         cout << "p : Register Prices" << endl;
         cout << "l : Register Locations" << endl;
-        cout << "p : Read Menu items" << endl;
+        cout << "i : Read Menu items" << endl;
         cout << "r : Return" << endl;
 
         cin >> selection;
@@ -44,9 +44,13 @@ void ManagementUI::main_menu(){
             clear_screen();
             register_location();
         }
-        else if(selection == 'p'|| selection == 'P'){
+        else if(selection == 'i'|| selection == 'I'){
             clear_screen();
-            service.read();
+            vector<PizzaMenu> pizza_vector;
+            service.read(pizza_vector);
+            for (int i = 0; i < pizza_vector.size(); i++){
+                cout << pizza_vector[i] << endl;
+            }
         }
 
         else if(selection == 'r'|| selection == 'R'){
@@ -62,7 +66,6 @@ void ManagementUI::regester_pizza() {
     char input = 'y';
     string name;
     int t;
-    char s;
 
 
     while (input == 'y'|| input == 'Y')
@@ -70,25 +73,20 @@ void ManagementUI::regester_pizza() {
         //PizzaMenu pizza;
         cout << "Please register the name and toppings of the pizza." << endl << endl << endl;
         cout << "Name of the pizza? ";
-        cin >> name;
-        cout << "What is the size of the pizza? " << endl;
-        cout << "   1 : 9 Inches" << endl;
-        cout << "   2 : 12 Inches" << endl;
-        cout << "   3 : 16 Inches" << endl;
-        cin >> s;
-
+        cin >> ws;
+        getline(cin, name);
+        cout << endl;
         cout << "How many toppings are on " << name << "? ";
         cin >> t;
-        PizzaMenu pizza(name,t,s);
-        cout << "What toppings are on " << name << " ? ";
+        PizzaMenu pizza(name,t);
+
+
         for (int i = 0; i < t; i++)
         {
-            string str;
-            cin >> str;
-
-            pizza.pizza_toppings.push_back(str);
+            cout << "- SELECT TOPPINGS - " << endl;
+            select_topping(pizza);
+            clear_screen();
         }
-        service.final_price(pizza, service.size_price(s));
 
         service.write(pizza);
 
@@ -138,23 +136,25 @@ void ManagementUI::register_prices(){
     cout << "Topping price: ";
     cin >> topping;
 
-    Price price();
-    price.setPrice(pizza,size,topping);
+    Price price(pizza,size,topping);
     service_price.write(price);
 }
 
-void ManagementUI::select_topping()
+void ManagementUI::select_topping(PizzaMenu& pizza)
 {
-    char input = 'y';
-    while((input = 'y') || (input = 'Y'))
+    int number;
+    vector<Toppings> topping_vector;
+    topping_service.read(topping_vector);
+    for (unsigned int i = 0; i < topping_vector.size(); i++)
     {
-        vector<Toppings> topping_vector;
-        topping_service.read(topping_vector);
-        for (unsigned int i = 0; i < topping_vector.size(); i++)
-        {
-            cout << i+1 << " - " << topping_vector[i].get_name() << endl;
-        }
+        cout << i+1 << " - " << topping_vector[i].get_name() << endl;
     }
+    cout << "Select a topping by number: ";
+    cin >> number;
+    number--;
+
+    Toppings topping(topping_vector[number].get_name());
+    pizza.topp_vector.push_back(topping);
 }
 
 void ManagementUI::menu(){
@@ -258,7 +258,7 @@ void ManagementUI::register_location()
         workplaces workplace;
         cout << "Enter a Location: ";
         cin >> workplace;
-        service_w.save(workplace);
+        service_w.write(workplace);
 
         cout << "Do you want to register more locations? Type 'y' for yes or 'n' for no: ";
         cin >> input;

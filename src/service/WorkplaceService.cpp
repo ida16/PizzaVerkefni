@@ -4,11 +4,11 @@ WorkplaceService::WorkplaceService(){
     //ctor
 }
 
-void WorkplaceService::save(workplaces& workplace){
-    wplace_repo.save(workplace);
+void WorkplaceService::write(workplaces& workplace){
+    wplace_repo.write(workplace);
 
 }
 
-void read(vector<workplaces> wplace_vector){
+void WorkplaceService::read(vector<workplaces>& wplace_vector){
     wplace_repo.read(wplace_vector);
 }

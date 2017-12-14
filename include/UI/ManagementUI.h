@@ -27,7 +27,7 @@ class ManagementUI
         void regester_pizza();
         void register_topping();
         void register_prices();
-        void select_topping();
+        void select_topping(PizzaMenu& pizza);
         void menu();
 //        void registerOther(Other& other);
 

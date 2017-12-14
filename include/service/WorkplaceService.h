@@ -10,8 +10,8 @@ class WorkplaceService
 {
     public:
         WorkplaceService();
-        void save(workplaces& workplace);
-        void read(vector<workplaces> wplace_vector);
+        void write(workplaces& workplace);
+        void read(vector<workplaces>& wplace_vector);
 
     private:
         WorkplacesRepo wplace_repo;

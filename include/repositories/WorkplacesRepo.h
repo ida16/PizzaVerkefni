@@ -14,7 +14,7 @@ class WorkplacesRepo
     public:
         WorkplacesRepo();
         void write(workplaces& workplaces);
-        void read(vector<workplaces> wplace_vector);
+        void read(vector<workplaces>& wplace_vector);
 
 
     private:

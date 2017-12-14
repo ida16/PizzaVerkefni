@@ -3,8 +3,8 @@
 #include <string>
 #include <istream>
 #include <iostream>
-#include <fstream>
-#include "toppings.h"
+#include "Toppings.h"
+#include "PriceService.h"
 #include <vector>
 
 using namespace std;
@@ -21,17 +21,16 @@ class PizzaMenu
         string getname();
         int get_topping_cnt();
         int getprice();
-        string setname(string str);
-        int settoppingCnt(int t);
-        int setprice(int p);
-        vector <string> pizzaToppings;
-        int finalPrice();
+        void setname(string str);
+        void settoppingCnt(int t);
+        void setprice(int p);
+        void set_size(int s);
+        vector<Toppings> topp_vector;
     private:
         int toppingCnt;
         string name;
+        int size;
         int price;
-        int const basePrice = 1200;
-        int const toppingPrice = 250;
 };
 
 #endif // PIZZAMENU_H

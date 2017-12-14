@@ -9,14 +9,17 @@ class Price
 {
     public:
         Price();
-        void setPrice(int pizza, int size, int topping);
+        Price(int pizza, int sizeprice, int topping);
         void read_in(int price, int counter);
+        int get_pizza();
+        int get_sizeprice();
+        int get_topping();
         friend ostream& operator << (ostream& out, const Price& price);
         friend istream& operator >> (istream& in, Price& price);
 
     private:
         int pizza;
-        int size;
+        int sizeprice;
         int topping;
 };
 

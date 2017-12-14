@@ -5,6 +5,7 @@
 #include <fstream>
 #include <vector>
 #include <string>
+#include <stdlib.h>
 
 #include "PizzaMenu.h"
 
@@ -13,7 +14,7 @@ class PizzaMenuRepo
 {
     public:
         PizzaMenuRepo();
-        void read();
+        void read(vector<PizzaMenu>& pizza);
         void write(PizzaMenu& pizza);
 
     private:

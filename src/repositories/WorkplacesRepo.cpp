@@ -16,7 +16,7 @@ void WorkplacesRepo::write(workplaces& workplaces)
     fout.close();
 }
 
-void WorkplacesRepo::read(vector<workplaces> wplace_vector)
+void WorkplacesRepo::read(vector<workplaces>& wplace_vector)
 {
     ifstream fin;
     string str;
@@ -29,7 +29,7 @@ void WorkplacesRepo::read(vector<workplaces> wplace_vector)
                 wplace.set_name(str);
                 wplace_vector.push_back(wplace);
             }
-
+        wplace_vector.pop_back();
         fin.close();
     }
     else

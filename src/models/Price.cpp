@@ -2,13 +2,13 @@
 
 Price::Price(){
     pizza = 0;
-    size = 0;
+    sizeprice = 0;
     topping = 0;
 }
 
-void Price::setPrice(int pizza, int size, int topping){
+Price::Price(int pizza, int sizeprice, int topping){
     this->pizza = pizza;
-    this->size = size;
+    this->sizeprice = sizeprice;
     this->topping = topping;
 }
 
@@ -17,20 +17,31 @@ void Price::read_in(int price, int counter){
         this-> pizza = price;
     }
     else if(counter = 1){
-        this-> size = price;
+        this-> sizeprice = price;
     }
     else if(counter = 2){
         this-> topping = price;
     }
 }
 
+int Price::get_pizza(){
+    return this-> pizza;
+}
+
+int Price::get_sizeprice(){
+    return this-> sizeprice;
+}
+
+int Price::get_topping(){
+    return this-> topping;
+}
+
 ostream& operator << (ostream& out, const Price& price){
-    out << price.pizza << "," << price.size << "," << price.topping;
+    out << price.pizza << endl << price.sizeprice << endl << price.topping;
 
     return out;
 }
 
 istream& operator >> (istream& in, Price& price){
-    in >> price.pizza >> price.size >> price.topping;
-    return in;
+    in >> price.pizza >> price.sizeprice >> price.topping;
 }

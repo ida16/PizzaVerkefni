@@ -8,13 +8,6 @@ void OrderService::write(Order& order){
     repo.write(order);
 }
 
-int OrderService::price(Order& order){
-    int p = 0;
-    ///p = pizza1 + pizza2;
-    return order.set_price(p);
-
-}
-
 void OrderService::statusUpdate(Order& order){
     order.status_advance();
     int status = order.get_status();
@@ -31,4 +24,14 @@ void OrderService::statusUpdate(Order& order){
     else if (status = 3){
         /// Fourth stage - Delivered, move to legacy orders file.
     }
+}
+
+int OrderService::calculate_price(Order& order){
+    int result = 0;
+    for (int i = 0; i < order.pizza_vector.size(); i++){
+        result += order.pizza_vector[i].getprice();
+        cout << "check.>" << endl;
+    }
+    order.set_price(result);
+    return result;
 }

@@ -77,7 +77,7 @@ void OrderRepo::write(Order& order)
     ofstream fout;
     fout.open("activeorders.txt", ios::app);
     if(fout.is_open()){
-        fout << order << endl;
+        fout << order;
     }
     fout.close();
 }
