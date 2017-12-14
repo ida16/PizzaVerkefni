@@ -5,18 +5,20 @@
 #include <fstream>
 #include <vector>
 #include "Order.h"
-#include <cstdlib>
+#include <stdlib.h>
+#include <PriceService.h>
+
+using namespace std;
 
 class OrderRepo
 {
     public:
         OrderRepo();
-        //void read(vector<Order>& order_vector);
         void write(Order& order);
-        //Order readin_vector(string line);
-        void read();
+        void read(vector<Order>& orders);
 
     private:
+        PriceService price_service;
 };
 
 #endif // ORDERREPO_H

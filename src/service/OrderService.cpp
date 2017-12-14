@@ -35,3 +35,8 @@ int OrderService::calculate_price(Order& order){
     order.set_price(result);
     return result;
 }
+
+void OrderService::read(vector<Order>& orders){
+    repo.read(orders);
+
+}

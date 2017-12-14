@@ -21,6 +21,7 @@ class PizzaMenu
         string getname();
         int get_topping_cnt();
         int getprice();
+        int get_size();
         void setname(string str);
         void settoppingCnt(int t);
         void setprice(int p);

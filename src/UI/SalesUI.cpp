@@ -25,11 +25,11 @@ void SalesUI::sales(){
         }
         else if(selection == 'v'){
             clear_screen();
-
+            view_active_orders();
         }
         else if(selection == 'c'){
             clear_screen();
-
+            change_order();
         }
         else if(selection == 'r'){
             clear_screen();
@@ -115,6 +115,12 @@ void SalesUI::select_pizza(Order& order){
         string name = pizza_vector[number].getname();
         pizzacopy.setname(name);
 
+        int top_cnt = pizza_vector[number].get_topping_cnt();
+        pizzacopy.settoppingCnt(top_cnt);
+
+        vector<Toppings> top_cpy = pizza_vector[number].topp_vector;
+        pizzacopy.topp_vector = top_cpy;
+
         cout << endl;
         cout << "What is the size of the pizza? " << endl;
         cout << "   1 : 9 Inches" << endl;
@@ -155,6 +161,7 @@ void SalesUI::select_topping(PizzaMenu& pizza)
 
     Toppings topping(topping_vector[number].get_name());
     pizza.topp_vector.push_back(topping);
+    pizza.settoppingCnt(pizza.get_topping_cnt() + 1);
 }
 
 string SalesUI::select_workplace(){
@@ -172,4 +179,92 @@ string SalesUI::select_workplace(){
     cin >> input;
     input--;
     return wplace_vector[input].get_name();
+}
+
+void SalesUI::view_active_orders(){
+    vector<Order> orders;
+    order_service.read(orders);
+    for (int i = 0; i < orders.size(); i++){
+        cout << orders[i].get_loc() << endl;
+        cout << "Delivery: " << orders[i].get_delivery() << " - Paid: " << orders[i].get_paid() << endl;
+        for (int j = 0; j < orders[i].pizza_vector.size(); j++){
+            cout << "   - " << orders[i].pizza_vector[j].getname() << " - " << endl;
+            cout << "Toppings: ";
+            for (int n = 0; n < orders[i].pizza_vector[j].topp_vector.size(); n++){
+                cout << orders[i].pizza_vector[j].topp_vector[n].get_name() << ", ";
+            }
+            cout << endl;
+            cout << "Pizza price: " << orders[i].pizza_vector[j].getprice() << endl;
+        }
+        cout << "Total Order Price: " << orders[i].get_price() << endl  << " ****** "<< endl;
+    }
+}
+
+void SalesUI::change_order(){
+    int input;
+    char in2;
+    bool running = true;
+    vector<Order> orders;
+    order_service.read(orders);
+
+    order_list(orders);
+    cout << "Pick an order to change: ";
+    cin >> input;
+    while (running){
+        show_order(input, orders);
+        input--;
+        cout << "l : Set location" << endl;
+        cout << "d : Set delivery" << endl;
+        cout << "c : Set paid" << endl;
+        cout << "s : Set status" << endl;
+        cout << "p : Change pizza" << endl;
+        cout << "r : Return" << endl;
+
+        cin >> in2;
+
+        if (in2 == 'l' || in2 == 'L'){
+            orders[input].set_loc(select_workplace());
+        }
+        else if (in2 == 'd' || in2 == 'D'){
+
+        }
+        else if (in2 == 'c' || in2 == 'C'){
+
+        }
+        else if (in2 == 's' || in2 == 'S'){
+
+        }
+        else if (in2 == 'p' || in2 == 'P'){
+
+        }
+        else if (in2 == 'r' || in2 == 'R'){
+            running = false;
+        }
+    }
+}
+
+void SalesUI::order_list(vector<Order>& orders){
+    for (int i = 0; i < orders.size(); i++){
+        cout <<  i+1 << " - " << orders[i].get_loc() << " - " << "D: " << orders[i].get_delivery() << " - P: " << orders[i].get_paid();
+        for (int j = 0; j < orders[i].pizza_vector.size(); j++){
+            cout << " - " << orders[i].pizza_vector[j].getname();
+        }
+        cout << endl << "Total Price: " << orders[i].get_price() << endl;
+    }
+}
+
+void SalesUI::show_order(int i, vector<Order>& orders){
+    i--;
+    cout << orders[i].get_loc() << endl;
+    cout << "Delivery: " << orders[i].get_delivery() << " - Paid: " << orders[i].get_paid() << endl;
+    for (int j = 0; j < orders[i].pizza_vector.size(); j++){
+        cout << "   - " << orders[i].pizza_vector[j].getname() << " - " << endl;
+        cout << "Toppings: ";
+        for (int n = 0; n < orders[i].pizza_vector[j].topp_vector.size(); n++){
+            cout << orders[i].pizza_vector[j].topp_vector[n].get_name() << ", ";
+        }
+        cout << endl;
+        cout << "Pizza price: " << orders[i].pizza_vector[j].getprice() << endl;
+    }
+    cout << "Total Order Price: " << orders[i].get_price() << endl  << " ****** "<< endl;
 }

@@ -23,6 +23,10 @@ class SalesUI
         void new_order();
         void select_pizza(Order& order);
         void select_topping(PizzaMenu& pizza);
+        void view_active_orders();
+        void change_order();
+        void order_list(vector<Order>& orders);
+        void show_order(int i, vector<Order>& orders);
         string select_workplace();
 
     private:
