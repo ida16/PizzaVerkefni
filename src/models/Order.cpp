@@ -1,19 +1,21 @@
 #include "Order.h"
 
+using namespace std;
+
 Order::Order(){
     //ctor
-    loc_no = 0;
-    paid = false;
-    delivery = false;
+    loc = "";
+    paid = "";
+    delivery = "";
     price = 0;
     status = 0;
 }
 
-bool Order::get_paid(){
+string Order::get_paid(){
     return this->paid;
 }
 
-bool Order::get_delivery(){
+string Order::get_delivery(){
     return this->delivery;
 }
 
@@ -25,23 +27,20 @@ int Order::get_status(){
     return this->status;
 }
 
-int Order::get_loc_no(){
-    return this->loc_no;
+string Order::get_loc(){
+    return this->loc;
 }
 
-void Order::push_pizza(PizzaMenu& pizza){
-    this->pizzaVector.push_back(pizza);
+
+void Order::set_loc(string loc){
+    this->loc = loc;
 }
 
-void Order::set_loc_no(int loc_no){
-    this->loc_no = loc_no;
-}
-
-void Order::set_paid(bool paid){
+void Order::set_paid(string paid){
     this->paid = paid;
 }
 
-void Order::set_delivery(bool delivery){
+void Order::set_delivery(string delivery){
     this->delivery = delivery;
 }
 
@@ -54,11 +53,14 @@ void Order::status_advance(){
 }
 
 ostream& operator << (ostream& out, Order& order){
-    out << order.loc_no << order.paid << "," << order.delivery << "," << order.price << "," << order.status << ",";
+    out << order.loc << "," << order.paid << "," << order.delivery << "," << order.price << "," << order.status << ",";
+    for (int i = 0; i < order.pizza_vector.size(); i++){
+        out << order.pizza_vector[i];
+    }
     return out;
 }
 
 istream& operator >> (istream& in, Order& order){
-    in >> order.loc_no >> order.paid >> order.delivery >> order.price >> order.status;
+
     return in;
 }

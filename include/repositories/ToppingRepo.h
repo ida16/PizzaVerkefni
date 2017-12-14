@@ -6,8 +6,6 @@
 #include <vector>
 #include "../models/Toppings.h"
 
-using namespace std;
-
 class ToppingRepo
 {
     public:

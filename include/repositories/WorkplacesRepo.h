@@ -5,19 +5,19 @@
 #include <string>
 #include <iostream>
 #include <fstream>
+#include <vector>
 
+using namespace std;
 
 class WorkplacesRepo
 {
     public:
         WorkplacesRepo();
-        void save(workplaces& workplaces);
-        void print();
-        void print_line(int line_no);
-        int number_locations();
+        void write(workplaces& workplaces);
+        void read(vector<workplaces>& wplace_vector);
+
 
     private:
-        workplaces locations;
 };
 
 #endif // WORKPLACESREPO_H

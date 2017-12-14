@@ -16,6 +16,7 @@
 					<Add directory="include/repositories" />
 					<Add directory="include/service" />
 					<Add directory="include/models" />
+					<Add directory="include/exception" />
 				</Compiler>
 			</Target>
 		</Build>
@@ -28,42 +29,52 @@
 		<Unit filename="include/UI/MainUI.h" />
 		<Unit filename="include/UI/ManagementUI.h" />
 		<Unit filename="include/UI/SalesUI.h" />
+		<Unit filename="include/exception/InvalidInputException.h" />
+		<Unit filename="include/exception/LowerCase.h" />
 		<Unit filename="include/models/Order.h" />
 		<Unit filename="include/models/Other.h" />
 		<Unit filename="include/models/PizzaMenu.h" />
+		<Unit filename="include/models/Price.h" />
 		<Unit filename="include/models/Toppings.h" />
 		<Unit filename="include/models/Workplaces.h" />
 		<Unit filename="include/repositories/OrderRepo.h" />
 		<Unit filename="include/repositories/OtherRepo.h" />
 		<Unit filename="include/repositories/PizzaMenuRepo.h" />
+		<Unit filename="include/repositories/PriceRepo.h" />
 		<Unit filename="include/repositories/ToppingRepo.h" />
 		<Unit filename="include/repositories/WorkplacesRepo.h" />
 		<Unit filename="include/service/OrderService.h" />
 		<Unit filename="include/service/OtherService.h" />
 		<Unit filename="include/service/PizzaMenuService.h" />
-		<Unit filename="include/service/Price.h" />
+		<Unit filename="include/service/PriceService.h" />
 		<Unit filename="include/service/ToppingService.h" />
+		<Unit filename="include/service/WorkplaceService.h" />
 		<Unit filename="main.cpp" />
 		<Unit filename="src/UI/DeliveryUI.cpp" />
 		<Unit filename="src/UI/KitchenUI.cpp" />
 		<Unit filename="src/UI/MainUI.cpp" />
 		<Unit filename="src/UI/ManagementUI.cpp" />
 		<Unit filename="src/UI/SalesUI.cpp" />
+		<Unit filename="src/exception/InvalidInputException.cpp" />
+		<Unit filename="src/exception/LowerCase.cpp" />
 		<Unit filename="src/models/Order.cpp" />
 		<Unit filename="src/models/Other.cpp" />
 		<Unit filename="src/models/PizzaMenu.cpp" />
+		<Unit filename="src/models/Price.cpp" />
 		<Unit filename="src/models/Toppings.cpp" />
 		<Unit filename="src/models/Workplaces.cpp" />
 		<Unit filename="src/repositories/OrderRepo.cpp" />
 		<Unit filename="src/repositories/OtherRepo.cpp" />
 		<Unit filename="src/repositories/PizzaMenuRepo.cpp" />
+		<Unit filename="src/repositories/PriceRepo.cpp" />
 		<Unit filename="src/repositories/ToppingRepo.cpp" />
 		<Unit filename="src/repositories/WorkplacesRepo.cpp" />
 		<Unit filename="src/service/OrderService.cpp" />
 		<Unit filename="src/service/OtherService.cpp" />
 		<Unit filename="src/service/PizzaMenuService.cpp" />
-		<Unit filename="src/service/Price.cpp" />
+		<Unit filename="src/service/PriceService.cpp" />
 		<Unit filename="src/service/ToppingService.cpp" />
+		<Unit filename="src/service/WorkplaceService.cpp" />
 		<Extensions>
 			<code_completion />
 			<envvars />

@@ -1,36 +1,32 @@
 #ifndef ORDER_H
 #define ORDER_H
 
-
 #include <iostream>
 
 #include "PizzaMenu.h"
 
-using namespace std;
 
 class Order
 {
     public:
         Order();
-        bool get_paid();
-        bool get_delivery();
+        string get_paid();
+        string get_delivery();
         int get_price();
         int get_status();
-        int get_loc_no();
-        void set_loc_no(int loc_no);
-        void set_paid(bool paid);
-        void set_delivery(bool delivery);
-        void push_pizza(PizzaMenu& pizza);
+        string get_loc();
+        void set_loc(string loc);
+        void set_paid(string paid);
+        void set_delivery(string delivery);
         int set_price(int price);
         void status_advance();
         friend ostream& operator << (ostream& out, Order& order);
         friend istream& operator >> (istream& in, Order& order);
-
+        vector<PizzaMenu> pizza_vector;
     private:
-        vector<PizzaMenu> pizzaVector;  // vector af pizzum?
-        int loc_no;
-        bool paid;
-        bool delivery;
+        string loc;
+        string paid;
+        string delivery;
         int price;
         int status;
 

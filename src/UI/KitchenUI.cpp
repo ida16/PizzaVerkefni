@@ -13,16 +13,15 @@ void KitchenUI::kitchen(){
     while (running == true){
 
         if(phase == 1){
-
-            WorkplacesRepo loc;
-            int number_loc = loc.number_locations();
+            vector<workplaces> wplace_vector;
+            w_place.read(wplace_vector);
 
             cout << endl << "   -SELECT WORKPLACE-" << endl << endl;
 
-            for (int i = 1; i <= number_loc; i++){
+            for (int i = 1; i <= wplace_vector.size(); i++){
 
                 cout << i << " - ";
-                loc.print_line(i);
+                wplace_vector[i-1].get_name();
                 cout << endl;
             }
 

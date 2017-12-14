@@ -4,22 +4,20 @@
 #include <iostream>
 #include <fstream>
 #include <vector>
-#include "../models/PizzaMenu.h"
 #include <string>
+#include <stdlib.h>
 
-using namespace std;
+#include "PizzaMenu.h"
 
 
 class PizzaMenuRepo
 {
     public:
         PizzaMenuRepo();
-        void read();
+        void read(vector<PizzaMenu>& pizza);
         void write(PizzaMenu& pizza);
-        void read_in_vector(string line);
 
     private:
-        PizzaMenu menu;
 };
 
 #endif // PIZZAMENUREPO_H
