@@ -48,15 +48,20 @@ int Order::set_price(int price){
     this->price = price;
 }
 
+int Order::set_status(int status){
+    this->status = status;
+}
+
 void Order::status_advance(){
     this->status++;
 }
 
 ostream& operator << (ostream& out, Order& order){
-    out << order.loc << "," << order.paid << "," << order.delivery << "," << order.price << "," << order.status << ",";
+    out << order.loc << "," << order.paid << "," << order.delivery << "," << order.price << "," << order.status << "," << order.pizza_vector.size() << ",";
     for (int i = 0; i < order.pizza_vector.size(); i++){
         out << order.pizza_vector[i];
     }
+    out << endl;
     return out;
 }
 

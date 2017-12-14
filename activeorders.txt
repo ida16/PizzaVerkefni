@@ -1,1 +1,2 @@
-HR,Yes,Yes,2113645800,0,skinka,4227285,pepp og svepp,4227285,
+HR,Yes,Yes,4550,0,2,skinka,1,skinka,hawaiian,2,skinka,ananas,
+HR,Yes,Yes,5300,0,2,skinka,3,skinka,pepperoni,sveppir,svepperoniskinkupizza,4,skinka,pepperoni,sveppir,ananas,

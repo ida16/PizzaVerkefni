@@ -19,6 +19,7 @@ class Order
         void set_paid(string paid);
         void set_delivery(string delivery);
         int set_price(int price);
+        int set_status(int status);
         void status_advance();
         friend ostream& operator << (ostream& out, Order& order);
         friend istream& operator >> (istream& in, Order& order);

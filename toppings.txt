@@ -1,1 +1,5 @@
+<<<<<<< HEAD
+skinka,pepperoni,sveppir,ananas,skinka,
+=======
 skinka,pepperoni,sveppir,ananas,hakk,pepp,
+>>>>>>> master

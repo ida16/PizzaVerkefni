@@ -11,10 +11,10 @@
 
 PizzaMenu::PizzaMenu(){
 
-    int toppingCnt = 0;
-    string name = "";
-    int size = 0;
-    int price = 0;
+    this->toppingCnt = 0;
+    this->name = "";
+    this->size = 0;
+    this->price = 0;
 }
 
 PizzaMenu::PizzaMenu(string name, int toppingCnt){
@@ -49,6 +49,10 @@ int PizzaMenu::get_topping_cnt(){
 
 int PizzaMenu::getprice(){
     return this-> price;
+}
+
+int PizzaMenu::get_size(){
+    return this-> size;
 }
 
 

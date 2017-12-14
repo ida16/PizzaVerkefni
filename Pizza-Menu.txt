@@ -3,3 +3,4 @@ svepperoni,2,pepperoni,sveppir,
 pepp og svepp,2,pepperoni,sveppir,
 skinka og sveppir,2,skinka,sveppir,
 hawaiian,2,skinka,ananas,
+

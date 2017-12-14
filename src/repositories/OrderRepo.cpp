@@ -5,72 +5,52 @@ OrderRepo::OrderRepo()
     //ctor
 }
 
-/*Order OrderRepo::readin_vector(string line){
-    string str = "";
-    vector<string> orders;
-    for (unsigned int i = 0; i < line.length(); i++) {
-        if (line[i] == ','){
-             orders.push_back(str);
-            str = "";
-        }
-        else {
-            str += line[i];
-        }
-    }
-    //for(size_t i = 0; i < orders.size(); i++){
-      //  cout << orders[i] << endl;
-    Order o(atoi(orders[0].c_str()), atoi(orders[1].c_str()), atoi(orders[2].c_str()), atoi(orders[3].c_str()), atoi(orders[4].c_str()));
-    return o;
-}*/
+void OrderRepo::read(vector<Order>& orders){
 
-/*void OrderRepo::read(){
-
-    vector<Order> order_from_file;
     ifstream fin;
     string str;
     fin.open("activeorders.txt");
 
     if (fin.is_open()){
-            while (getline(fin, str)){
-                   Order or = readin_vector(str);
-                   order_from_file.push_back(or)
-
+        while (!fin.eof()){
+            Order dummyorder;
+            getline(fin, str, ',');
+            dummyorder.set_loc(str);
+            getline(fin, str, ',');
+            dummyorder.set_paid(str);
+            getline(fin, str, ',');
+            dummyorder.set_delivery(str);
+            getline(fin, str, ',');
+            dummyorder.set_price(atoi(str.c_str()));
+            getline(fin, str, ',');
+            dummyorder.set_status(atoi(str.c_str()));
+            getline(fin, str, ',');
+            int no_pizza = atoi(str.c_str());
+            for (int i = 0; i < no_pizza; i++){
+                PizzaMenu pizza;
+                getline(fin, str, ',');
+                pizza.setname(str);
+                getline(fin, str, ',');
+                pizza.settoppingCnt(atoi(str.c_str()));
+                for (int j = 0; j < pizza.get_topping_cnt(); j++){
+                    getline(fin, str, ',');
+                    Toppings topping(str);
+                    pizza.topp_vector.push_back(topping);
+                }
+                pizza.setprice(price_service.calculate(pizza.get_topping_cnt(), pizza.get_size()));
+                dummyorder.pizza_vector.push_back(pizza);
             }
-
+            getline(fin, str);
+            orders.push_back(dummyorder);
+        }
+        orders.pop_back();
         fin.close();
     }
     else{
 
         cout << "can not write in file, file is closed" << endl;
     }
-    for(size_t i = 0; i < or  .size(); i++){
-        cout << order_from_file[i] << endl;
 }
-
-
-
-//void read(vector<Order>& order_vector)
-//{
-    /*ifstream fin;
-    string str;
-    fin.open("activeorders.txt");
-
-
-    if (fin.is_open()){
-            while (!fin.eof()){
-                getline(fin,str, ',');
-                Order order();
-                order_vector.push_back(order);
-            }
-
-        fin.close();
-        toppingVector.pop_back();
-    }
-    else{
-
-        cout << "can not write in file, file is closed" << endl;
-    }*/
-//}*/
 
 void OrderRepo::write(Order& order)
 {

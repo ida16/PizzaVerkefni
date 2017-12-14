@@ -1,3 +1,5 @@
+<<<<<<< HEAD
+=======
 # depslib dependency file v1.0
 1512982798 source:c:\users\oli\documents\hr\verk1\pizza\pizzaverkefni\main.cpp
 	<iostream>
@@ -883,6 +885,7 @@
 
 1513231513 source:c:\users\oli\documents\github\pizzaverkefni\src\ui\managementui.cpp
 	"../../include/UI/ManagementUI.h"
+>>>>>>> master
 
 1513251040 c:\users\kristin\desktop\verkelgt\pizzaassignment\pizzaverkefni\include\service\priceservice.h
 	"Price.h"
