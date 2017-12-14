@@ -80,4 +80,14 @@ int PizzaMenuService::size_price(char input){
         this -> price_s = 1800;
         return price_s;
     }
+}
+
+bool PizzaMenuService::is_valid_input(PizzaMenu& pizza) {
+    if(!isdigit(pizza.get_topping_cnt())) {
+        throw (InvalidInputException("Invalid!"));
+        return false;
     }
+    else
+        return true;
+
+}
