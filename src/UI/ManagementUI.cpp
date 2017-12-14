@@ -46,6 +46,7 @@ void ManagementUI::main_menu(){
         }
         else if(selection == 'i'|| selection == 'I'){
             clear_screen();
+            cout << "---Pizza Menu---" << endl << endl;
             vector<PizzaMenu> pizza_vector;
             service.read(pizza_vector);
             for (int i = 0; i < pizza_vector.size(); i++){
@@ -61,11 +62,13 @@ void ManagementUI::main_menu(){
     }
 }
 
-void ManagementUI::regester_pizza() {
+void ManagementUI::regester_pizza() throw(InvalidInputException) {
 
     char input = 'y';
     string name;
-    int t;
+    int topp;
+    char t;
+
 
 
     while (input == 'y'|| input == 'Y')
@@ -76,13 +79,25 @@ void ManagementUI::regester_pizza() {
         cin >> ws;
         getline(cin, name);
         cout << endl;
-        cout << "How many toppings are on " << name << "? ";
-        cin >> t;
-        PizzaMenu pizza(name,t);
+
+        do{
+            cout << "How many toppings are on " << name << "? ";
+            try{
+                cin >> t;
+                if (!isdigit(t)){
+                    throw InvalidInputException("invalid Input, should be a integer.");
+                    }
+                }
+            catch (InvalidInputException e){
+                cout << e.get_message() << endl;
+                }
+        }
+        while (!isdigit(t));
+        topp = t - '0';
+        PizzaMenu pizza(lower.to_lower(name),topp);
 
 
-        for (int i = 0; i < t; i++)
-        {
+        for (int i = 0; i < topp; i++) {
             cout << "- SELECT TOPPINGS - " << endl;
             select_topping(pizza);
             clear_screen();
@@ -96,7 +111,6 @@ void ManagementUI::regester_pizza() {
         clear_screen();
 
     }
-
 }
 
 void ManagementUI::register_topping()
@@ -113,7 +127,7 @@ void ManagementUI::register_topping()
         cout << "Name of the topping? ";
         cin >> str;
 
-        Toppings topping(str);
+        Toppings topping(lower.to_lower(str));
 
         topping_service.write(topping);
 
@@ -127,30 +141,110 @@ void ManagementUI::register_topping()
 
 void ManagementUI::register_prices(){
 
-    int pizza, size, topping;
+    string pizza, size, topping;
+    int pizzai, sizei, toppingi;
+    bool digit = true;
 
-    cout << "Base Pizza price: ";
-    cin >> pizza;
-    cout << "Size increase price: ";
-    cin >> size;
-    cout << "Topping price: ";
-    cin >> topping;
+    do{
+        cout << "Base Pizza price: ";
+        try{
+            cin >> pizza;
+            for(int i = 0; i < pizza.length(); i++){
+                if (!isdigit(pizza[i])){
+                    digit = false;
+                    break;
+                }
+                else{
+                    digit = true;
+                }
+            }
+        if (!digit){
+            throw InvalidInputException("Invalid input, should be an integer.");
+        }
+    }
+    catch(InvalidInputException e){
+        cout << e.get_message() << endl;
+        }
+    }
+    while (!digit);
+    pizzai = atoi(pizza.c_str());
 
-    Price price(pizza,size,topping);
+    do{
+        cout << "Size increase price: ";
+        try{
+            cin >> size;
+            for(int i = 0; i < size.length(); i++){
+                if (!isdigit(size[i])){
+                    digit = false;
+                    break;
+                }
+            else{
+                digit = true;
+            }
+        }
+            if (!digit){
+                throw InvalidInputException("Invalid input, should be an integer.");
+            }
+        }
+        catch(InvalidInputException e){
+            cout << e.get_message() << endl;
+        }
+    }
+    while (!digit);
+    sizei = atoi(size.c_str());
+
+    do{
+        cout << "Topping price: ";
+        try{
+            cin >> topping;
+            for(int i = 0; i < topping.length(); i++){
+                if (!isdigit(topping[i])){
+                    digit = false;
+                    break;
+                }
+                else{
+                    digit = true;
+                }
+            }
+            if (!digit){
+                throw InvalidInputException("Invalid input, should be an integer.");
+                }
+            }
+        catch(InvalidInputException e){
+            cout << e.get_message() << endl;
+            }
+    }
+    while (!digit);
+    toppingi = atoi(topping.c_str());
+
+    Price price(pizzai,sizei,toppingi);
     service_price.write(price);
 }
 
 void ManagementUI::select_topping(PizzaMenu& pizza)
 {
     int number;
+    char number_char;
     vector<Toppings> topping_vector;
     topping_service.read(topping_vector);
-    for (unsigned int i = 0; i < topping_vector.size(); i++)
-    {
+    for (unsigned int i = 0; i < topping_vector.size(); i++) {
         cout << i+1 << " - " << topping_vector[i].get_name() << endl;
     }
-    cout << "Select a topping by number: ";
-    cin >> number;
+    do{
+        cout << "Select a topping by number: ";
+        try{
+            cin >> number_char;
+            if(!isdigit(number_char)) {
+                throw InvalidInputException("invalid Input, should be a integer.");
+            }
+        }
+        catch (InvalidInputException e){
+            cout << e.get_message() << endl;
+            }
+        }
+    while (!isdigit(number_char));
+    number = number_char - '0';
+
     number--;
 
     Toppings topping(topping_vector[number].get_name());

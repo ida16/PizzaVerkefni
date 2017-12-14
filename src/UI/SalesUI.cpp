@@ -95,6 +95,7 @@ void SalesUI::new_order()
 
 void SalesUI::select_pizza(Order& order){
     int number, s;
+    char number_char, s_char;
     char input1 = 'y';
     vector<PizzaMenu> pizza_vector;
     pizza_service.read(pizza_vector);
@@ -105,8 +106,22 @@ void SalesUI::select_pizza(Order& order){
         for (int i = 1; i <= pizza_vector.size(); i++){
             cout << i << " - " << pizza_vector[i-1].getname() << endl;
         }
+
+    do{
         cout << "Select a pizza by number: ";
-        cin >> number;
+        try{
+            cin >> number_char;
+            if(!isdigit(number_char)) {
+                throw InvalidInputException("invalid Input, should be a integer.");
+            }
+        }
+        catch (InvalidInputException e){
+            cout << e.get_message() << endl;
+            }
+        }
+    while (!isdigit(number_char));
+    number = number_char - '0';
+
         /*if(number = 0){
             ///call custom pizza code
         }
@@ -122,11 +137,23 @@ void SalesUI::select_pizza(Order& order){
         pizzacopy.topp_vector = top_cpy;
 
         cout << endl;
+    do{
         cout << "What is the size of the pizza? " << endl;
         cout << "   1 : 9 Inches" << endl;
         cout << "   2 : 12 Inches" << endl;
         cout << "   3 : 16 Inches" << endl;
-        cin >> s;
+        try {
+            cin >> s_char;
+            if(!isdigit(s_char)) {
+                throw InvalidInputException("Invalid input, should be an integer.");
+            }
+        }
+        catch (InvalidInputException e) {
+            cout << e.get_message() << endl;
+        }
+    }
+    while(!isdigit(s_char));
+        s = s_char - '0';
         pizzacopy.set_size(s);
 
         char input2 = 'y';
@@ -143,6 +170,7 @@ void SalesUI::select_pizza(Order& order){
         order.pizza_vector.push_back(pizzacopy);
         cout << "Would you like to add another pizza (y/n)? ";
         cin >> input1;
+
     }
 }
 
