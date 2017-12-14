@@ -14,7 +14,7 @@ class PizzaMenuService
         int final_price(PizzaMenu& pizza, int price);
         int size_price(char input);
         void read();
-        bool is_valid_input(PizzaMenu& pizza);
+        bool is_valid_topping_count(int topping_count);
 
     private:
         PizzaMenuRepo repo;

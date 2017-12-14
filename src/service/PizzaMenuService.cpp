@@ -82,8 +82,8 @@ int PizzaMenuService::size_price(char input){
     }
 }
 
-bool PizzaMenuService::is_valid_input(PizzaMenu& pizza) {
-    if(!isdigit(pizza.get_topping_cnt())) {
+bool PizzaMenuService::is_valid_topping_count(int topping_count) {
+    if(!isdigit(topping_count)) {
         throw (InvalidInputException("Invalid!"));
         return false;
     }

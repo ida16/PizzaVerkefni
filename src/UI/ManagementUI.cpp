@@ -77,7 +77,7 @@ void ManagementUI::regester_pizza() {
 
         cout << "How many toppings are on " << name << "? ";
         cin >> t;
-        service.is_valid_input(t);
+        service.is_valid_topping_count(t);
 
         PizzaMenu pizza(lower.switch_to_lower(name),t,s);
         cout << "What toppings are on " << name << " ? ";
