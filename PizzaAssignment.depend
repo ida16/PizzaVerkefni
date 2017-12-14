@@ -170,7 +170,7 @@
 
 1512992330 D
 
-1513257924 source:c:\users\kristin\desktop\verkelgt\pizzaassignment\pizzaverkefni\main.cpp
+1513263526 source:c:\users\kristin\desktop\verkelgt\pizzaassignment\pizzaverkefni\main.cpp
 	"include/UI/MainUI.h"
 
 1513090149 c:\users\kristin\desktop\verkelgt\pizzaassignment\pizzaverkefni\include\ui\mainui.h
@@ -269,7 +269,7 @@
 	"../../include/models/Workplaces.h"
 	"../../include/UI/SalesUI.h"
 
-1513258490 c:\users\kristin\desktop\verkelgt\pizzaassignment\pizzaverkefni\include\ui\managementui.h
+1513263526 c:\users\kristin\desktop\verkelgt\pizzaassignment\pizzaverkefni\include\ui\managementui.h
 	<iostream>
 	<string>
 	"../models/Workplaces.h"
@@ -351,7 +351,7 @@
 	"PriceService.h"
 	<vector>
 
-1513254921 c:\users\kristin\desktop\verkelgt\pizzaassignment\pizzaverkefni\include\service\pizzamenuservice.h
+1513263526 c:\users\kristin\desktop\verkelgt\pizzaassignment\pizzaverkefni\include\service\pizzamenuservice.h
 	"PizzaMenuRepo.h"
 	"InvalidInputException.h"
 
@@ -526,7 +526,7 @@
 
 1512993624 source:c:\users\kristin\desktop\verkelgt\pizzaassignment\pizzaverkefni\src\service\otherservice.cpp
 
-1513254957 source:c:\users\kristin\desktop\verkelgt\pizzaassignment\pizzaverkefni\src\service\pizzamenuservice.cpp
+1513263526 source:c:\users\kristin\desktop\verkelgt\pizzaassignment\pizzaverkefni\src\service\pizzamenuservice.cpp
 	"../../include/service/PizzaMenuService.h"
 
 1512992140 source:c:\users\kristin\desktop\verkelgt\pizzaassignment\pizzaverkefni\src\service\price.cpp
@@ -598,10 +598,10 @@
 	"../../include/models/Toppings.h"
 	"../../include/models/Workplaces.h"
 
-1513261052 source:c:\users\kristin\desktop\verkelgt\pizzaassignment\pizzaverkefni\src\ui\managementui.cpp
+1513263526 source:c:\users\kristin\desktop\verkelgt\pizzaassignment\pizzaverkefni\src\ui\managementui.cpp
 	"../../include/UI/ManagementUI.h"
 
-1513251040 source:c:\users\kristin\desktop\verkelgt\pizzaassignment\pizzaverkefni\src\ui\salesui.cpp
+1513263526 source:c:\users\kristin\desktop\verkelgt\pizzaassignment\pizzaverkefni\src\ui\salesui.cpp
 	"../../include/UI/SalesUI.h"
 
 1513262039 source:c:\users\lenovo\documents\github\pizzaverkefni\src\ui\managementui.cpp
@@ -898,7 +898,7 @@
 	<string>
 	<stdlib.h>
 
-1513251803 c:\users\kristin\desktop\verkelgt\pizzaassignment\pizzaverkefni\include\exception\lowercase.h
+1513263526 c:\users\kristin\desktop\verkelgt\pizzaassignment\pizzaverkefni\include\exception\lowercase.h
 	<string>
 
 1513251040 c:\users\kristin\desktop\verkelgt\pizzaassignment\pizzaverkefni\include\models\order.h
@@ -934,13 +934,13 @@
 1513251040 source:c:\users\kristin\desktop\verkelgt\pizzaassignment\pizzaverkefni\src\service\priceservice.cpp
 	"PriceService.h"
 
-1513251743 source:c:\users\kristin\desktop\verkelgt\pizzaassignment\pizzaverkefni\src\exception\lowercase.cpp
+1513263526 source:c:\users\kristin\desktop\verkelgt\pizzaassignment\pizzaverkefni\src\exception\lowercase.cpp
 	"LowerCase.h"
 
-1513258695 source:c:\users\kristin\desktop\verkelgt\pizzaassignment\pizzaverkefni\src\exception\invalidinputexception.cpp
+1513263526 source:c:\users\kristin\desktop\verkelgt\pizzaassignment\pizzaverkefni\src\exception\invalidinputexception.cpp
 	"InvalidInputException.h"
 
-1513254775 c:\users\kristin\desktop\verkelgt\pizzaassignment\pizzaverkefni\include\exception\invalidinputexception.h
+1513263526 c:\users\kristin\desktop\verkelgt\pizzaassignment\pizzaverkefni\include\exception\invalidinputexception.h
 	<string>
 
 1513259162 c:\users\lenovo\documents\github\pizzaverkefni\include\service\priceservice.h

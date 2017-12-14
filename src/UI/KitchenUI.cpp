@@ -21,7 +21,7 @@ void KitchenUI::kitchen(){
             for (int i = 1; i <= wplace_vector.size(); i++){
 
                 cout << i << " - ";
-                wplace_vector[i-1].get_name();
+                cout << wplace_vector[i-1].get_name();
                 cout << endl;
             }
 
