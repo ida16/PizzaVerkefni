@@ -143,16 +143,83 @@ void ManagementUI::register_topping()
 
 void ManagementUI::register_prices(){
 
-    int pizza, size, topping;
+    string pizza, size, topping;
+    int pizzai, sizei, toppingi;
+    bool digit = true;
 
+    do{
     cout << "Base Pizza price: ";
+    try{
     cin >> pizza;
-    cout << "Size increase price: ";
-    cin >> size;
-    cout << "Topping price: ";
-    cin >> topping;
+    for(int i = 0; i < pizza.length(); i++){
+        if (!isdigit(pizza[i])){
+            digit = false;
+            break;
+        }
+        else{
+            digit = true;
+        }
+    }
+    if (!digit){
+        throw InvalidInputException("Invalid input, should be an integer.");
+    }
+    }
+    catch(InvalidInputException e){
+    cout << e.get_message() << endl;
+    }
+    }
+    while (!digit);
+    pizzai = atoi(pizza.c_str());
 
-    Price price(pizza,size,topping);
+    do{
+    cout << "Size increase price: ";
+    try{
+    cin >> size;
+    for(int i = 0; i < size.length(); i++){
+        if (!isdigit(size[i])){
+            digit = false;
+            break;
+        }
+        else{
+            digit = true;
+        }
+    }
+    if (!digit){
+        throw InvalidInputException("Invalid input, should be an integer.");
+    }
+    }
+    catch(InvalidInputException e){
+    cout << e.get_message() << endl;
+    }
+    }
+    while (!digit);
+    sizei = atoi(size.c_str());
+
+    do{
+    cout << "Topping price: ";
+    try{
+    cin >> topping;
+    for(int i = 0; i < topping.length(); i++){
+        if (!isdigit(topping[i])){
+            digit = false;
+            break;
+        }
+        else{
+            digit = true;
+        }
+    }
+    if (!digit){
+        throw InvalidInputException("Invalid input, should be an integer.");
+    }
+    }
+    catch(InvalidInputException e){
+    cout << e.get_message() << endl;
+    }
+    }
+    while (!digit);
+    toppingi = atoi(topping.c_str());
+
+    Price price(pizzai,sizei,toppingi);
     service_price.write(price);
 }
 

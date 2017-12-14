@@ -16,6 +16,7 @@
 					<Add directory="include/repositories" />
 					<Add directory="include/service" />
 					<Add directory="include/models" />
+					<Add directory="include/exception" />
 				</Compiler>
 			</Target>
 		</Build>
@@ -28,6 +29,8 @@
 		<Unit filename="include/UI/MainUI.h" />
 		<Unit filename="include/UI/ManagementUI.h" />
 		<Unit filename="include/UI/SalesUI.h" />
+		<Unit filename="include/exception/InvalidInputException.h" />
+		<Unit filename="include/exception/LowerCase.h" />
 		<Unit filename="include/models/Order.h" />
 		<Unit filename="include/models/Other.h" />
 		<Unit filename="include/models/PizzaMenu.h" />
@@ -52,6 +55,8 @@
 		<Unit filename="src/UI/MainUI.cpp" />
 		<Unit filename="src/UI/ManagementUI.cpp" />
 		<Unit filename="src/UI/SalesUI.cpp" />
+		<Unit filename="src/exception/InvalidInputException.cpp" />
+		<Unit filename="src/exception/LowerCase.cpp" />
 		<Unit filename="src/models/Order.cpp" />
 		<Unit filename="src/models/Other.cpp" />
 		<Unit filename="src/models/PizzaMenu.cpp" />
