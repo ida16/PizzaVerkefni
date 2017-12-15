@@ -23,7 +23,7 @@ PizzaMenu::PizzaMenu(string name, int toppingCnt){
 }
 
 ostream& operator <<(ostream& out, PizzaMenu& pizza){
-    out << pizza.name << "," << pizza.toppingCnt << ",";
+    out << pizza.name << "," << pizza.size << "," << pizza.toppingCnt << ",";
     for (int i = 0; i < pizza.topp_vector.size(); i++)
         {
             out << pizza.topp_vector[i] << ",";

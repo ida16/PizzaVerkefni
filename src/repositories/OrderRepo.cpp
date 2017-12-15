@@ -31,6 +31,8 @@ void OrderRepo::read(vector<Order>& orders){
                 getline(fin, str, ',');
                 pizza.setname(str);
                 getline(fin, str, ',');
+                pizza.set_size(atoi(str.c_str()));
+                getline(fin, str, ',');
                 pizza.settoppingCnt(atoi(str.c_str()));
                 for (int j = 0; j < pizza.get_topping_cnt(); j++){
                     getline(fin, str, ',');
