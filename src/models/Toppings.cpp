@@ -1,7 +1,5 @@
 #include "../../include/models/Toppings.h"
 
-
-
 //constructor sem núll stillir
 Toppings::Toppings(){
 

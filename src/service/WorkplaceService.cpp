@@ -1,7 +1,7 @@
 #include "WorkplaceService.h"
 
 WorkplaceService::WorkplaceService(){
-    //ctor
+
 }
 
 void WorkplaceService::write(workplaces& workplace){

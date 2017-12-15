@@ -3,7 +3,6 @@
 using namespace std;
 
 Order::Order(){
-    //ctor
     loc = "";
     paid = "";
     delivery = "";

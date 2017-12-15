@@ -4,8 +4,6 @@
 
 int main()
 {
-
-
     MainUI main;
     main.main();
 

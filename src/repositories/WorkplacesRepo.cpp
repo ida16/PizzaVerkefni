@@ -2,12 +2,11 @@
 
 WorkplacesRepo::WorkplacesRepo()
 {
-    //ctor
+
 }
 
 void WorkplacesRepo::write(workplaces& workplaces)
 {
-    //string name = "";
     ofstream fout;
     fout.open("workplaces.txt", ios::app);
     if(fout.is_open()){

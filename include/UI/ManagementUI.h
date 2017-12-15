@@ -31,11 +31,9 @@ class ManagementUI
         void register_prices();
         void select_topping(PizzaMenu& pizza);
         void menu();
-//        void registerOther(Other& other);
 
     private:
         PizzaMenuService service;
- //       OtherService otherservice;
         ToppingService topping_service;
         WorkplaceService service_w;
         PriceService service_price;

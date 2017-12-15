@@ -1,7 +1,7 @@
 #include "PriceService.h"
 
 PriceService::PriceService(){
-    //ctor
+
 }
 
 void PriceService::write(Price& price){

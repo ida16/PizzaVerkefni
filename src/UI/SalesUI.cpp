@@ -4,7 +4,7 @@ using namespace std;
 
 SalesUI::SalesUI()
 {
-    //ctor
+
 }
 
 void SalesUI::sales(){
@@ -34,7 +34,6 @@ void SalesUI::sales(){
         else if(selection == 'r'){
             clear_screen();
             running = false;
-
         }
     }
 }
@@ -60,8 +59,10 @@ void SalesUI::new_order()
     // Kalla í location val til að velja staðsetningu
     // location val sækir vector af location og prentar
     // Notandi velur location ( Workplace object
+
     order.set_loc(select_workplace());
     // Spyrja hvort pöntun sé sótt eða send ( bool delivery )
+
     cout << "Is the order a delivery? Type 'y' for yes and 'n' for no: ";
     cin >> input1;
     if ((input1 = 'y') || (input1 = 'Y'))
@@ -74,8 +75,10 @@ void SalesUI::new_order()
     }
     order.set_delivery(delivery);
     // Finna út verð, skrifa út og skrifa í order ( int price )
+
     cout << "Price: " << order_service.calculate_price(order) << endl;
     // Merkja hvort pöntun sé greidd ( bool paid )
+
     cout << "Has the order been paid for? Type 'y' for yes and 'n' for no: ";
     cin >> input2;
     if ((input2 = 'y') || (input2 = 'Y'))
@@ -89,7 +92,6 @@ void SalesUI::new_order()
     order.set_paid(paid);
     order_service.write(order);
     // Senda order niður í Service klasa sem sendir í Repo og skrifar í skjal.
-
 
 }
 

@@ -2,7 +2,7 @@
 
 KitchenUI::KitchenUI()
 {
-    //ctor
+
 }
 
 void KitchenUI::kitchen(){

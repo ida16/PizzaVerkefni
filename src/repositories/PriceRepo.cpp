@@ -2,7 +2,7 @@
 
 PriceRepo::PriceRepo()
 {
-    //ctor
+
 }
 
 void PriceRepo::write(Price& price)

@@ -2,7 +2,7 @@
 
 LowerCase::LowerCase()
 {
-    //ctor
+
 }
 
 string LowerCase::to_lower(string name){

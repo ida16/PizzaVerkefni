@@ -2,7 +2,7 @@
 
 
 PizzaMenuService::PizzaMenuService(){
-    //ctor
+
 }
 
 void PizzaMenuService::write(PizzaMenu& menu){

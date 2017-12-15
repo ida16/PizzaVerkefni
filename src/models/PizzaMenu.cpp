@@ -64,7 +64,6 @@ void PizzaMenu::settoppingCnt(int t){
    this -> toppingCnt = t;
 }
 
-
 void PizzaMenu::setprice(int p){
     this -> price = p;
 }

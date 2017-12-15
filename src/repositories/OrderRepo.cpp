@@ -2,7 +2,7 @@
 
 OrderRepo::OrderRepo()
 {
-    //ctor
+
 }
 
 void OrderRepo::read(vector<Order>& orders){
